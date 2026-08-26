@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Enable Test (no permissions)",
+  "version": "1.0.0",
+  "description": "Minimal extension with zero permissions, used only to test whether a brand-new unpacked extension can be enabled in this browser.",
+  "action": {
+    "default_title": "Enable Test"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
