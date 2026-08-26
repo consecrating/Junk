@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow Batch</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Flow Batch</h1>
+    <span class="tag">Veo · Google Flow</span>
+  </header>
+
+  <div id="notOnFlow" class="banner hidden">
+    You're not on Google Flow. <a href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">Open Flow ↗</a>
+  </div>
+
+  <label class="field">
+    <span>Prompts <small>(one per line)</small></span>
+    <textarea id="prompts" rows="8" placeholder="A neon city at night, cinematic drone shot&#10;A cat surfing a giant wave, slow motion&#10;Timelapse of a blooming flower, macro"></textarea>
+  </label>
+
+  <div class="row">
+    <label class="field small">
+      <span>Delay between submits (s)</span>
+      <input id="delay" type="number" min="1" max="600" value="8" />
+    </label>
+    <label class="field small">
+      <span>Repeats per prompt</span>
+      <input id="repeats" type="number" min="1" max="20" value="1" />
+    </label>
+  </div>
+
+  <label class="field checkbox">
+    <input id="waitForIdle" type="checkbox" checked />
+    <span>Wait for the Generate button to be ready before each submit</span>
+  </label>
+
+  <div class="actions">
+    <button id="startBtn" class="primary">Start batch</button>
+    <button id="stopBtn" class="ghost" disabled>Stop</button>
+  </div>
+
+  <div id="status" class="status">Idle.</div>
+
+  <ul id="log" class="log"></ul>
+
+  <footer>
+    <small>Automates the on-page prompt box &amp; Generate button. Respect Google's Terms &amp; your plan's quota.</small>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
