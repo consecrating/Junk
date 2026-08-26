@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Flow Batch — Simultaneous Video Generator",
+  "name": "Batch Prompt Runner",
   "version": "1.0.0",
-  "description": "Queue and auto-submit multiple prompts to Google Flow (Veo) to generate several videos back-to-back.",
+  "description": "Queue and auto-submit multiple prompts to your AI video studio to generate several videos back-to-back.",
   "permissions": ["storage", "scripting", "activeTab"],
   "host_permissions": [
     "https://labs.google/*"
   ],
   "action": {
-    "default_title": "Flow Batch",
+    "default_title": "Batch Prompt Runner",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

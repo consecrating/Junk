@@ -1,9 +1,9 @@
 /*
- * Flow Batch — content script
- * Runs on https://labs.google/* and automates Google Flow's prompt box + Generate button.
+ * Batch Prompt Runner — content script
+ * Runs on the video studio site and automates its prompt box + Generate button.
  *
- * Google Flow is a React app with no stable public selectors, so we locate elements
- * heuristically (placeholder text, ARIA labels, button text). If Google changes the UI,
+ * The studio is a React app with no stable public selectors, so we locate elements
+ * heuristically (placeholder text, ARIA labels, button text). If the site changes its UI,
  * update the SELECTOR HEURISTICS block below — that's the only part that should need edits.
  */
 
@@ -57,7 +57,7 @@
   }
 
   /* ---------------- SELECTOR HEURISTICS ----------------
-   * Adjust these if Google Flow's DOM changes.
+   * Adjust these if the studio's DOM changes.
    */
 
   function findPromptInput() {
@@ -183,7 +183,7 @@
       return false;
     }
 
-    // Try Enter first (many Flow builds submit on Enter), then click as fallback.
+    // Try clicking the submit button (some builds also submit on Enter).
     button.click();
     await sleep(300);
 
