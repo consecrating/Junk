@@ -7,9 +7,6 @@
   "host_permissions": [
     "https://labs.google/*"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_title": "Flow Batch",
     "default_popup": "popup/popup.html",

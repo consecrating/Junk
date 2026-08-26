@@ -57,7 +57,8 @@ babysitting the page.
 | `manifest.json` | MV3 config, permissions (`storage`, `scripting`, `activeTab`), host access to `labs.google`. |
 | `popup/*` | The UI: collects prompts + settings, shows live log, talks to the content script. |
 | `content.js` | Runs on the Flow page. Finds the prompt box + Generate button, types each prompt, clicks Generate, and paces submissions. |
-| `background.js` | Light MV3 service worker: injects the content script into already-open Flow tabs and updates the toolbar tooltip. |
+
+The popup injects `content.js` on demand (via `chrome.scripting`), so you never have to reload the Flow tab after installing. There is no background service worker — one less thing to fail.
 
 The content script fills the prompt field using a **React-safe** value setter (native
 setter + `input`/`change` events) so Flow's UI registers the text.

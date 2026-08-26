@@ -39,6 +39,20 @@ async function getActiveTab() {
   return tab;
 }
 
+/* Make sure the content script is present in the tab. It guards against
+   double-injection internally, so calling this repeatedly is safe. */
+async function ensureContentScript(tabId) {
+  try {
+    await chrome.scripting.executeScript({
+      target: { tabId },
+      files: ["content.js"],
+    });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 /* Persist form state */
 async function saveState() {
   await chrome.storage.local.set({
@@ -107,6 +121,9 @@ els.startBtn.addEventListener("click", async () => {
   setRunning(true);
   els.log.innerHTML = "";
   setStatus("Starting batch…");
+
+  // Inject on demand so the user never has to reload the Flow tab first.
+  await ensureContentScript(tab.id);
 
   chrome.tabs.sendMessage(tab.id, { type: "START_BATCH", config }, (resp) => {
     if (chrome.runtime.lastError) {
