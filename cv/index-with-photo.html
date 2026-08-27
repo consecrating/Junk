@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sumit Sahay — Microbiology QA/QC | Validation & Qualification</title>
+<meta name="description" content="Sumit Sahay — Pharmaceutical Microbiology, QA/QMS, Validation &amp; Qualification professional with 14+ years of experience." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:        #16202b;   /* primary text */
+    --ink-soft:   #45535f;   /* secondary text */
+    --muted:      #6b7885;   /* meta text */
+    --line:       #e4e8ec;   /* hairlines */
+    --brand:      #0f766e;   /* teal accent */
+    --brand-deep: #0b3b47;   /* deep petrol for name */
+    --chip-bg:    #edf6f5;
+    --chip-ink:   #0b5c55;
+    --page:       #f2f4f6;   /* screen backdrop */
+    --card:       #ffffff;
+    --maxw:       860px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: "Inter", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: var(--maxw);
+    margin: 32px auto;
+    background: var(--card);
+    padding: 44px 52px 48px;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(16, 32, 43, 0.10);
+  }
+
+  /* ---------- Header ---------- */
+  header.cv-head {
+    border-bottom: 3px solid var(--brand);
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+  .head-text { flex: 1; min-width: 0; }
+  .photo-wrap { flex: none; }
+  .photo {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--brand);
+    box-shadow: 0 4px 14px rgba(11, 59, 71, 0.18);
+    background: var(--chip-bg);
+    display: block;
+  }
+  /* Monogram fallback shown until a real photo is added */
+  .photo-fallback {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    border: 3px solid var(--brand);
+    background: linear-gradient(135deg, var(--brand-deep), var(--brand));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px rgba(11, 59, 71, 0.18);
+  }
+  .name {
+    font-size: 33px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--brand-deep);
+    margin: 0;
+    line-height: 1.05;
+  }
+  .headline {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--brand);
+    margin: 7px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+  .contact {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 13.2px;
+    color: var(--ink-soft);
+  }
+  .contact span { display: inline-flex; align-items: center; gap: 6px; }
+  .contact a { color: var(--ink-soft); text-decoration: none; }
+  .contact svg { width: 14px; height: 14px; flex: none; color: var(--brand); }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 24px; }
+  h2.sec {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand-deep);
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  h2.sec::before {
+    content: "";
+    width: 15px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--brand);
+    display: inline-block;
+  }
+
+  .summary { margin: 0; color: var(--ink-soft); font-size: 14.3px; }
+
+  /* ---------- Competency chips ---------- */
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip {
+    background: var(--chip-bg);
+    color: var(--chip-ink);
+    border: 1px solid #d6ebe8;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12.6px;
+    font-weight: 500;
+  }
+
+  /* ---------- Skill groups ---------- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 30px;
+  }
+  .skill-row { font-size: 13.6px; color: var(--ink-soft); }
+  .skill-row b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Experience ---------- */
+  .job { margin-bottom: 17px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .job-role { font-size: 15px; font-weight: 700; color: var(--ink); margin: 0; }
+  .job-co { font-size: 13.6px; font-weight: 600; color: var(--brand); margin: 1px 0 0; }
+  .job-date {
+    font-size: 12.4px;
+    font-weight: 600;
+    color: var(--muted);
+    white-space: nowrap;
+    background: #f4f6f7;
+    border-radius: 5px;
+    padding: 3px 9px;
+  }
+  ul.bullets { margin: 8px 0 0; padding-left: 0; list-style: none; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--brand);
+  }
+  ul.bullets li b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Education ---------- */
+  .edu-item { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-deg { font-weight: 700; color: var(--ink); font-size: 14px; }
+  .edu-school { color: var(--ink-soft); font-size: 13.4px; }
+  .edu-meta { font-size: 12.6px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+  /* ---------- Print ---------- */
+  @media print {
+    @page { size: A4; margin: 9mm 11mm; }
+    html, body { background: #fff; font-size: 8.9pt; line-height: 1.34; }
+    .sheet {
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      max-width: none;
+      padding: 0;
+    }
+    header.cv-head { padding-bottom: 11px; margin-bottom: 13px; gap: 20px; }
+    .photo, .photo-fallback { width: 96px; height: 96px; }
+    .photo-fallback { font-size: 34px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section { margin-top: 12px; }
+    h2.sec { margin-bottom: 7px; padding-bottom: 5px; }
+    .job { margin-bottom: 9px; }
+    .job-top { margin-bottom: 0; }
+    ul.bullets { margin-top: 5px; }
+    ul.bullets li { margin-bottom: 2px; padding-left: 14px; }
+    .chips { gap: 5px; }
+    .chip { padding: 3px 8px; }
+    .skills-grid { gap: 4px 26px; }
+    section:nth-of-type(2), section:nth-of-type(3) { break-inside: avoid; }
+    .job, .edu-item { break-inside: avoid; }
+    a { color: var(--ink-soft) !important; text-decoration: none; }
+  }
+
+  @media (max-width: 640px) {
+    .sheet { padding: 26px 20px; margin: 0; border-radius: 0; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .name { font-size: 27px; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <!-- ============ HEADER ============ -->
+  <header class="cv-head">
+    <div class="head-text">
+    <h1 class="name">Sumit Sahay</h1>
+    <p class="headline">Pharmaceutical Microbiology &nbsp;•&nbsp; QA / QMS &nbsp;•&nbsp; Validation &amp; Qualification</p>
+    <div class="contact">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+        <a href="mailto:sumitsahay555@gmail.com">sumitsahay555@gmail.com</a>
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 88303 08162
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        A-704 Shubh-2, Shyamal Cross Road, Ahmedabad 380015
+      </span>
+    </div>
+    </div><!-- /head-text -->
+    <div class="photo-wrap">
+      <!-- Replace photo.jpg in this folder with your headshot; the monogram shows until then -->
+      <img class="photo" src="photo.jpg" alt="Sumit Sahay"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div class="photo-fallback" style="display:none;">SS</div>
+    </div>
+  </header>
+
+  <!-- ============ SUMMARY ============ -->
+  <section>
+    <h2 class="sec">Professional Summary</h2>
+    <p class="summary">
+      Accomplished pharmaceutical <b>Microbiology &amp; Quality</b> professional with <b>14+ years</b> of experience across
+      Quality Control and Quality Assurance in sterile and non-sterile manufacturing. Proven leader of teams of up to
+      <b>35 members</b>, driving <b>GMP/cGMP compliance</b>, <b>validation &amp; qualification (IQ/OQ/PQ)</b>, and robust
+      <b>Quality Management Systems (QMS)</b>. Deep expertise in deviation management, <b>OOS/OOT investigations</b>,
+      <b>CAPA</b>, root cause analysis, <b>data integrity (ALCOA+)</b>, and <b>US FDA audit readiness</b>. Skilled in
+      contamination control strategy, environmental monitoring, sterility assurance, and rapid microbiological methods.
+    </p>
+  </section>
+
+  <!-- ============ CORE COMPETENCIES ============ -->
+  <section>
+    <h2 class="sec">Core Competencies</h2>
+    <div class="chips">
+      <span class="chip">cGMP / GLP / GDP</span>
+      <span class="chip">Quality Management System (QMS)</span>
+      <span class="chip">Validation &amp; Qualification (IQ/OQ/PQ)</span>
+      <span class="chip">Process &amp; Method Validation</span>
+      <span class="chip">Deviation Management</span>
+      <span class="chip">OOS / OOT Investigations</span>
+      <span class="chip">CAPA</span>
+      <span class="chip">Change Control</span>
+      <span class="chip">Root Cause Analysis (RCA)</span>
+      <span class="chip">Data Integrity (ALCOA+)</span>
+      <span class="chip">21 CFR Part 11</span>
+      <span class="chip">US FDA / WHO-GMP Audits</span>
+      <span class="chip">Contamination Control Strategy (CCS)</span>
+      <span class="chip">Environmental Monitoring (EM)</span>
+      <span class="chip">Sterility Assurance</span>
+      <span class="chip">Aseptic Processing</span>
+      <span class="chip">SOP / STP Authoring</span>
+      <span class="chip">Team Leadership &amp; Mentoring</span>
+    </div>
+  </section>
+
+  <!-- ============ TECHNICAL SKILLS ============ -->
+  <section>
+    <h2 class="sec">Technical &amp; Laboratory Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><b>Microbiological Testing:</b> Microbial Limit Tests (MLT), Sterility Testing, Bacterial Endotoxin Testing (BET/LAL)</div>
+      <div class="skill-row"><b>Validation Studies:</b> Media Fill, Growth Promotion, Hold Time, Decimal Reduction Time (DRT), Autoclave Requalification</div>
+      <div class="skill-row"><b>Monitoring:</b> Environmental Monitoring, Water Analysis, Liquid/Airborne Particle Count (21 CFR)</div>
+      <div class="skill-row"><b>Identification:</b> Microbial Identification, Biological Indicators, Spore Count Studies</div>
+      <div class="skill-row"><b>QMS Software:</b> TrackWise (Deviation / OOS / CAPA / Change Control)</div>
+      <div class="skill-row"><b>Instrumentation:</b> pH Meter, Conductivity Meter, Balance — Calibration &amp; Qualification</div>
+      <div class="skill-row"><b>Documentation:</b> SOPs, STPs, Specifications, COAs, Validation Protocols &amp; Reports</div>
+      <div class="skill-row"><b>Methods:</b> Rapid Microbiological Methods (RMM), Aseptic Technique, Cleanroom Operations</div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section>
+    <h2 class="sec">Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Deputy Manager — Quality, Corporate Microbiology</p>
+          <p class="job-co">Otsuka Pharmaceutical Pvt. Ltd. — Ahmedabad, India</p>
+        </div>
+        <span class="job-date">Jan 2025 – Present</span>
+      </div>
+      <ul class="bullets">
+        <li>Lead a <b>23-member team</b>, planning routine operations and ensuring smooth, on-time execution.</li>
+        <li>Develop and oversee <b>validation plans</b> for instruments and equipment across corporate sites.</li>
+        <li>Manage deviations, <b>OOS/OOT</b> events, investigations and <b>CAPA</b> in line with QMS requirements.</li>
+        <li>Drive implementation of <b>rapid microbiological methods</b> to improve testing efficiency.</li>
+        <li>Design and deliver corporate microbiology and <b>GMP compliance training programs</b>; mentor site microbiologists and lab managers.</li>
+        <li>Spearhead the <b>Contamination Control Strategy (CCS)</b> and champion a strong <b>data integrity</b> culture.</li>
+        <li>Analyze corporate metrics — OOS trends, <b>environmental monitoring (EM)</b> trends and water quality trends — with root cause analysis.</li>
+        <li>Lead <b>IQ/OQ/PQ</b>, process validation, media fill studies, <b>BET</b>, sterility validation and hold time studies.</li>
+        <li>Ensure full <b>audit readiness</b> for internal and external inspections; author and update SOPs/STPs to current regulatory guidelines.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Assistant Manager — Quality Control Microbiology</p>
+          <p class="job-co">Zydus Lifesciences Ltd. — Ahmedabad, India</p>
+        </div>
+        <span class="job-date">May 2022 – Jan 2025</span>
+      </div>
+      <ul class="bullets">
+        <li>Developed plans and schedules for validation of equipment, instruments and methods.</li>
+        <li>Managed deviations, OOS/OOT events, investigations and CAPA within <b>TrackWise QMS</b> software.</li>
+        <li>Provided decision-making support for routine activities and validation processes.</li>
+        <li>Reviewed testing of raw materials, finished products, stability and in-process samples using <b>Microbial Limit Tests (MLT)</b>.</li>
+        <li>Assigned tasks, supervised lab activities, reviewed results and implemented CAPA against internal audit responses.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Assistant Manager — Quality Control Microbiology</p>
+          <p class="job-co">Akums Drugs &amp; Pharmaceuticals — Haridwar, India</p>
+        </div>
+        <span class="job-date">Sep 2021 – Mar 2022</span>
+      </div>
+      <ul class="bullets">
+        <li>Supervised a <b>35-member team</b> across sterility, BET, MLT, media preparation and validation execution.</li>
+        <li>Executed method validation and instrument qualification (pH meters, conductivity meters).</li>
+        <li>Managed <b>IQ/OQ/PQ</b> for microbiology equipment and instruments, maintaining documentation with vendor records.</li>
+        <li>Handled deviations, OOS/OOT events, investigations and CAPA; made critical decisions on routine and validation work.</li>
+        <li>Reviewed MLT testing of raw materials, finished products, stability and in-process samples; ensured internal audit compliance.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Senior Executive — Quality Control Microbiology</p>
+          <p class="job-co">IPCA Laboratories Ltd. — Silvassa &amp; Vadodara, India</p>
+        </div>
+        <span class="job-date">May 2018 – Sep 2021</span>
+      </div>
+      <ul class="bullets">
+        <li>Led a <b>20-member team</b>, managing work assignments and daily laboratory operations.</li>
+        <li>Managed <b>IQ/OQ/PQ</b> for microbiology equipment and instruments with complete documentation.</li>
+        <li>Addressed deviations, OOS/OOT events, investigations and CAPA.</li>
+        <li>Reviewed testing of raw materials, finished products and stability samples; performed MLT on stability and in-process samples.</li>
+        <li>Ensured internal audit compliance (major/minor points) and managed <b>US FDA audit responses</b>.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Officer — Quality Control Microbiology</p>
+          <p class="job-co">Oman Pharmaceutical Products Co. LLC — Salalah, Oman</p>
+        </div>
+        <span class="job-date">Sep 2015 – Feb 2018</span>
+      </div>
+      <ul class="bullets">
+        <li>Authored and reviewed SOPs, specifications, test procedures, <b>COAs</b> and validation protocols; prepared reports for MLT and <b>Decimal Reduction Time (DRT)</b> studies.</li>
+        <li>Managed deviations, OOS/OOT events, investigations and CAPA; developed validation plans and schedules.</li>
+        <li>Conducted MLT and chemical &amp; microbiological water analysis; managed instrument calibration and equipment qualification.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Quality Control Officer-II, Microbiologist</p>
+          <p class="job-co">Sun Pharmaceuticals Ltd. — Halol, India</p>
+        </div>
+        <span class="job-date">Jun 2014 – Jun 2015</span>
+      </div>
+      <ul class="bullets">
+        <li>Tested raw materials, finished products, stability and in-process samples using MLT, BET, particle count and water analysis.</li>
+        <li>Conducted BET/MLT validation, spore count studies, growth promotion tests, autoclave requalification and environmental monitoring; performed microbial identification and biological indicator handling.</li>
+        <li>Performed liquid-borne particle count analysis in compliance with <b>21 CFR</b> particulate matter testing.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <p class="job-role">Quality Control Officer, Microbiologist</p>
+          <p class="job-co">Cipla Pharmaceuticals Ltd. — Verna, India</p>
+        </div>
+        <span class="job-date">Feb 2012 – May 2014</span>
+      </div>
+      <ul class="bullets">
+        <li>Tested raw materials, finished products, stability and in-process samples using MLT, BET and water analysis.</li>
+        <li>Managed environmental monitoring, media fills and investigations; performed MLT, water and BET validation.</li>
+        <li>Prepared media, sterilization and growth promotion tests; participated in internal audits to strengthen <b>cGMP</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section>
+    <h2 class="sec">Education</h2>
+    <div class="edu-item">
+      <div>
+        <span class="edu-deg">M.Sc., Microbiology</span> &nbsp;—&nbsp; <span class="edu-school">Bangalore University, Bangalore</span>
+      </div>
+      <span class="edu-meta">2008 – 2010 &nbsp;·&nbsp; 67%</span>
+    </div>
+    <div class="edu-item">
+      <div>
+        <span class="edu-deg">B.Sc., Microbiology &amp; Chemistry</span> &nbsp;—&nbsp; <span class="edu-school">Goa University, Goa</span>
+      </div>
+      <span class="edu-meta">2005 – 2008 &nbsp;·&nbsp; 65%</span>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
