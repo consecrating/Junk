@@ -56,32 +56,36 @@
   }
   .head-text { flex: 1; min-width: 0; }
   .photo-wrap { flex: none; }
+  /* Passport-size photo: 35mm x 45mm portrait ratio */
   .photo {
-    width: 118px;
-    height: 118px;
-    border-radius: 50%;
+    width: 106px;
+    height: 136px;
+    border-radius: 6px;
     object-fit: cover;
-    border: 3px solid var(--brand);
-    box-shadow: 0 4px 14px rgba(11, 59, 71, 0.18);
+    border: 2px solid var(--brand);
+    box-shadow: 0 4px 14px rgba(11, 59, 71, 0.16);
     background: var(--chip-bg);
     display: block;
   }
-  /* Monogram fallback shown until a real photo is added */
+  /* Dashed passport-size placeholder shown until a real photo is added */
   .photo-fallback {
-    width: 118px;
-    height: 118px;
-    border-radius: 50%;
-    border: 3px solid var(--brand);
-    background: linear-gradient(135deg, var(--brand-deep), var(--brand));
-    color: #fff;
+    width: 106px;
+    height: 136px;
+    border-radius: 6px;
+    border: 2px dashed var(--brand);
+    background: var(--chip-bg);
+    color: var(--chip-ink);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    box-shadow: 0 4px 14px rgba(11, 59, 71, 0.18);
+    gap: 6px;
+    text-align: center;
+    padding: 6px;
   }
+  .photo-fallback svg { width: 34px; height: 34px; stroke: var(--brand); }
+  .photo-fallback .pf-title { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+  .photo-fallback .pf-sub { font-size: 9.5px; font-weight: 500; color: var(--muted); line-height: 1.25; }
   .name {
     font-size: 33px;
     font-weight: 800;
@@ -217,8 +221,8 @@
       padding: 0;
     }
     header.cv-head { padding-bottom: 11px; margin-bottom: 13px; gap: 20px; }
-    .photo, .photo-fallback { width: 96px; height: 96px; }
-    .photo-fallback { font-size: 34px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .photo, .photo-fallback { width: 92px; height: 118px; }
+    .photo-fallback { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     section { margin-top: 12px; }
     h2.sec { margin-bottom: 7px; padding-bottom: 5px; }
     .job { margin-bottom: 9px; }
@@ -264,10 +268,14 @@
     </div>
     </div><!-- /head-text -->
     <div class="photo-wrap">
-      <!-- Replace photo.jpg in this folder with your headshot; the monogram shows until then -->
+      <!-- Replace photo.jpg in this folder with a passport-size headshot; the placeholder shows until then -->
       <img class="photo" src="photo.jpg" alt="Sumit Sahay"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-      <div class="photo-fallback" style="display:none;">SS</div>
+      <div class="photo-fallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="pf-title">PHOTO</span>
+        <span class="pf-sub">Passport Size<br/>35 × 45 mm</span>
+      </div>
     </div>
   </header>
 
