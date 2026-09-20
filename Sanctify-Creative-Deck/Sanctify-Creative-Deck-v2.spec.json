@@ -1,0 +1,592 @@
+{
+  "title": "Sanctify \u2014 Graphic Design Showcase",
+  "subtitle": "Creative Portfolio 2026",
+  "author": "Sanctify \u00b7 Vasco, Goa",
+  "theme": "sanctify",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Graphic Design\nShowcase",
+      "subtitle": "Nineteen selected works in packaging, print, catalogue, social and menu design \u2014 produced in-house by the award-winning advertising & digital marketing agency in Goa.",
+      "meta": {
+        "logo": "/projects/sandbox/.deck-build/logo_light.png",
+        "eyebrow": "Creative Portfolio \u00b7 2026",
+        "watermark": "19",
+        "footer": "advertise to promote....   \u00b7   www.sanctify.in   \u00b7   +91 99233 52923"
+      }
+    },
+    {
+      "type": "agenda",
+      "title": "What's inside",
+      "bullets": [
+        {
+          "text": "Packaging Design \u2014 3 pieces"
+        },
+        {
+          "text": "Print & Flyers \u2014 3 pieces"
+        },
+        {
+          "text": "Corporate Catalogue \u2014 2 pieces"
+        },
+        {
+          "text": "Social & Festival \u2014 4 pieces"
+        },
+        {
+          "text": "Political Communication \u2014 3 pieces"
+        },
+        {
+          "text": "Menu Design \u2014 4 pieces"
+        }
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "The studio",
+      "subtitle": "Sanctify \u2014 Vasco, South Goa",
+      "stats": [
+        {
+          "value": "13+",
+          "label": "Years of practice",
+          "detail": "Creative work since 2012"
+        },
+        {
+          "value": "100+",
+          "label": "Websites delivered",
+          "detail": "Designed and developed"
+        },
+        {
+          "value": "4.8/5",
+          "label": "Client rating",
+          "detail": "Across 128 reviews"
+        },
+        {
+          "value": "1000+",
+          "label": "Keywords ranking",
+          "detail": "On Google page one"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "title": "The collection",
+      "subtitle": "All nineteen pieces \u2014 packaging, print, catalogue, social, political and menu design.",
+      "images": [
+        "art/art04.png",
+        "art/art05.png",
+        "art/art06.png",
+        "art/art02.png",
+        "art/art12.png",
+        "art/art11.png",
+        "art/art09.png",
+        "art/art10.png",
+        "art/art01.png",
+        "art/art03.png",
+        "art/art07.png",
+        "art/art08.png",
+        "art/art13.png",
+        "art/art14.png",
+        "art/art15.png",
+        "art/art16.png",
+        "art/art17.png",
+        "art/art18.png",
+        "art/art19.png"
+      ],
+      "meta": {
+        "cols": 7
+      }
+    },
+    {
+      "type": "section",
+      "title": "Packaging Design",
+      "subtitle": "FMCG pack artwork built as a shelf-ready flavour system.",
+      "caption": "3 pieces",
+      "meta": {
+        "number": "01",
+        "eyebrow": "Section 01"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Popcorn Tub Cover \u2014 Chilli Cheese",
+      "image_path": "art/art04.png",
+      "caption": "Retail tub wrap where the flavour drives the whole colour system: chilli red bleeding into cheese gold, the popcorn bowl holding the optical centre. Mandatory matter \u2014 ingredients, nutrition, allergens, FSSAI licence, barcode \u2014 is set tight into a left column so the shelf-facing half stays appetising.",
+      "notes": "Mother India \u00b7 Sree Foods \u2014 Popcorn Tub Cover \u2014 Chilli Cheese. Retail tub wrap where the flavour drives the whole colour system: chilli red bleeding into cheese gold, the popcorn bowl holding the optical centre. Mandatory matter \u2014 ingredients, nutrition, allergens, FSSAI licence, barcode \u2014 is set tight into a left column so the shelf-facing half stays appetising.",
+      "meta": {
+        "client": "Mother India \u00b7 Sree Foods",
+        "category": "Packaging",
+        "format": "Landscape \u00b7 881\u00d7784px \u00b7 0.7MP",
+        "palette": [
+          "FFC278",
+          "DEBF8B",
+          "250607",
+          "907347",
+          "E65540"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Popcorn Tub Cover \u2014 Chilli Tomato",
+      "image_path": "art/art05.png",
+      "caption": "The second SKU. Only the colour field and flavour lozenge move \u2014 sunflower ground, tomato-red type, chilli and tomato garnish \u2014 while masthead, bowl and legal column hold their exact positions. That discipline is what makes three packs read as one family from two metres away.",
+      "notes": "Mother India \u00b7 Sree Foods \u2014 Popcorn Tub Cover \u2014 Chilli Tomato. The second SKU. Only the colour field and flavour lozenge move \u2014 sunflower ground, tomato-red type, chilli and tomato garnish \u2014 while masthead, bowl and legal column hold their exact positions. That discipline is what makes three packs read as one family from two metres away.",
+      "meta": {
+        "client": "Mother India \u00b7 Sree Foods",
+        "category": "Packaging",
+        "format": "Landscape \u00b7 845\u00d7752px \u00b7 0.6MP",
+        "palette": [
+          "FFC406",
+          "510001",
+          "E2C85A",
+          "A2722C",
+          "FFCF0E"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Popcorn Tub Cover \u2014 Cream Onion",
+      "image_path": "art/art06.png",
+      "caption": "The mildest flavour takes the softest field: magenta-pink with cream accents and a spoon-and-onion garnish signalling savoury, not spicy. Same die-line, same typography, same barcode position \u2014 the system can absorb a fourth flavour without redrawing the pack.",
+      "notes": "Mother India \u00b7 Sree Foods \u2014 Popcorn Tub Cover \u2014 Cream Onion. The mildest flavour takes the softest field: magenta-pink with cream accents and a spoon-and-onion garnish signalling savoury, not spicy. Same die-line, same typography, same barcode position \u2014 the system can absorb a fourth flavour without redrawing the pack.",
+      "meta": {
+        "client": "Mother India \u00b7 Sree Foods",
+        "category": "Packaging",
+        "format": "Landscape \u00b7 936\u00d7833px \u00b7 0.8MP",
+        "palette": [
+          "FCAFEC",
+          "BA7299",
+          "29131F",
+          "DABAC0",
+          "FCA5DB"
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "Print & Flyers",
+      "subtitle": "Leaflets and takeaway collateral that must work in the hand.",
+      "caption": "3 pieces",
+      "meta": {
+        "number": "02",
+        "eyebrow": "Section 02"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "A4 Manufacturer Flyer",
+      "image_path": "art/art02.png",
+      "caption": "A trust-first leaflet for India's largest manufacturer of precipitated calcium carbonate. The range is shot as one family photograph rather than isolated packs, then six benefit blocks in a two-column grid carry the argument. Corporate green anchors the page; a QR code bridges print to web.",
+      "notes": "Shree Karni Chemicals \u2014 A4 Manufacturer Flyer. A trust-first leaflet for India's largest manufacturer of precipitated calcium carbonate. The range is shot as one family photograph rather than isolated packs, then six benefit blocks in a two-column grid carry the argument. Corporate green anchors the page; a QR code bridges print to web.",
+      "meta": {
+        "client": "Shree Karni Chemicals",
+        "category": "Print \u00b7 B2B",
+        "format": "Portrait \u00b7 849\u00d71190px \u00b7 1.0MP",
+        "palette": [
+          "FFFFFF",
+          "0C350C",
+          "818C7F",
+          "E5E6E7",
+          "FEFFFF"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Biryani Flyer \u2014 Front",
+      "image_path": "art/art12.png",
+      "caption": "The front face sells appetite before information. A full-bleed biryani hero fills the upper field with a hand-script overlay promising the dish at home. Address, delivery radius and a dial-now number are stacked into one quiet block so the food never competes with logistics.",
+      "notes": "Cinders Take Away \u2014 Biryani Flyer \u2014 Front. The front face sells appetite before information. A full-bleed biryani hero fills the upper field with a hand-script overlay promising the dish at home. Address, delivery radius and a dial-now number are stacked into one quiet block so the food never competes with logistics.",
+      "meta": {
+        "client": "Cinders Take Away",
+        "category": "Print \u00b7 Food",
+        "format": "Portrait \u00b7 827\u00d71183px \u00b7 1.0MP",
+        "palette": [
+          "54603D",
+          "2C2D2C",
+          "9F9157",
+          "653F34",
+          "C8CF82"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Biryani Price List \u2014 Reverse",
+      "image_path": "art/art11.png",
+      "caption": "The reverse is pure utility. Veg and non-veg run as parallel columns so the customer compares across rather than down, and regular versus per-kilo bulk rates split into two banded blocks. One offer sits reversed out on the fold line, where the eye lands last.",
+      "notes": "Cinders Take Away \u2014 Biryani Price List \u2014 Reverse. The reverse is pure utility. Veg and non-veg run as parallel columns so the customer compares across rather than down, and regular versus per-kilo bulk rates split into two banded blocks. One offer sits reversed out on the fold line, where the eye lands last.",
+      "meta": {
+        "client": "Cinders Take Away",
+        "category": "Print \u00b7 Food",
+        "format": "Portrait \u00b7 827\u00d71183px \u00b7 1.0MP",
+        "palette": [
+          "9F2B2C",
+          "908557",
+          "84483D",
+          "A82C2E",
+          "912929"
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "Corporate Catalogue",
+      "subtitle": "Multi-page product literature for a manufacturing brand.",
+      "caption": "2 pieces",
+      "meta": {
+        "number": "03",
+        "eyebrow": "Section 03"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Catalogue \u2014 Inside Spread",
+      "image_path": "art/art09.png",
+      "caption": "An interior spread split between persuasion and proof. Five advantages are numbered 01\u201305 for fast scanning down the left page; the facing column carries spline-system construction drawings and a full specification table. The timber palette is sampled from the product itself.",
+      "notes": "Sungmi India Pvt. Ltd. \u2014 Catalogue \u2014 Inside Spread. An interior spread split between persuasion and proof. Five advantages are numbered 01\u201305 for fast scanning down the left page; the facing column carries spline-system construction drawings and a full specification table. The timber palette is sampled from the product itself.",
+      "meta": {
+        "client": "Sungmi India Pvt. Ltd.",
+        "category": "Catalogue",
+        "format": "Landscape \u00b7 1119\u00d7795px \u00b7 0.9MP",
+        "palette": [
+          "FFFFFF",
+          "936430",
+          "CBAD8E",
+          "EEEEEC",
+          "FFFEFD"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Catalogue \u2014 Outside Spread",
+      "image_path": "art/art10.png",
+      "caption": "The outer spread pairs an installed interior photograph with the cover panel. Four blunt badges \u2014 no water, no cement, no sand, no bricks \u2014 do the fast selling for a dry-installation system, while quick-install copy, features and the contact block close the fold.",
+      "notes": "Sungmi India Pvt. Ltd. \u2014 Catalogue \u2014 Outside Spread. The outer spread pairs an installed interior photograph with the cover panel. Four blunt badges \u2014 no water, no cement, no sand, no bricks \u2014 do the fast selling for a dry-installation system, while quick-install copy, features and the contact block close the fold.",
+      "meta": {
+        "client": "Sungmi India Pvt. Ltd.",
+        "category": "Catalogue",
+        "format": "Landscape \u00b7 1101\u00d7799px \u00b7 0.9MP",
+        "palette": [
+          "A3998B",
+          "FFFFFF",
+          "8BBBBE",
+          "DEE8E9",
+          "FFFEFB"
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "Social & Festival",
+      "subtitle": "Feed-native posts for retail, PSU and B2B brands.",
+      "caption": "4 pieces",
+      "meta": {
+        "number": "04",
+        "eyebrow": "Section 04"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Google Business Profile Thumbnail",
+      "image_path": "art/art01.png",
+      "caption": "A map-listing thumbnail engineered to survive heavy downscaling. Condensed caps in high-visibility yellow and cyan lock over a real workshop photograph, and the service list is compressed to four words so the offer still resolves at map-pin size on a phone.",
+      "notes": "Automotive Detailing Studio \u2014 Google Business Profile Thumbnail. A map-listing thumbnail engineered to survive heavy downscaling. Condensed caps in high-visibility yellow and cyan lock over a real workshop photograph, and the service list is compressed to four words so the offer still resolves at map-pin size on a phone.",
+      "meta": {
+        "client": "Automotive Detailing Studio",
+        "category": "Social \u00b7 Local SEO",
+        "format": "Landscape \u00b7 546\u00d7305px \u00b7 0.2MP",
+        "palette": [
+          "506A6F",
+          "09121F",
+          "A6B89E",
+          "343E44",
+          "0E355A"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Hose Expiry Safety Post",
+      "image_path": "art/art03.png",
+      "caption": "A public-safety message that had to feel warm, not bureaucratic. A diagonal split divides duty from delight: hazard-red cylinder and shield on the blue field, a child's smile on the yellow. One instruction, one interval, one call to action \u2014 nothing else competes.",
+      "notes": "Hindustan Petroleum \u00b7 HP Gas \u2014 Hose Expiry Safety Post. A public-safety message that had to feel warm, not bureaucratic. A diagonal split divides duty from delight: hazard-red cylinder and shield on the blue field, a child's smile on the yellow. One instruction, one interval, one call to action \u2014 nothing else competes.",
+      "meta": {
+        "client": "Hindustan Petroleum \u00b7 HP Gas",
+        "category": "Social \u00b7 PSU",
+        "format": "Square \u00b7 990\u00d71089px \u00b7 1.1MP",
+        "palette": [
+          "163673",
+          "B78D3C",
+          "F7E4AB",
+          "6F2B33",
+          "122F66"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Makar Sankranti Greeting",
+      "image_path": "art/art07.png",
+      "caption": "A festival greeting doing double duty as a service reminder. Paper kites and a warm sun-disc frame the wish while a container truck grounds the promise of transporting anything anywhere. Contact details ride a clean white band so the celebratory half stays uncluttered.",
+      "notes": "Poonia Road Carriers \u2014 Makar Sankranti Greeting. A festival greeting doing double duty as a service reminder. Paper kites and a warm sun-disc frame the wish while a container truck grounds the promise of transporting anything anywhere. Contact details ride a clean white band so the celebratory half stays uncluttered.",
+      "meta": {
+        "client": "Poonia Road Carriers",
+        "category": "Social \u00b7 Festival",
+        "format": "Portrait \u00b7 807\u00d71037px \u00b7 0.8MP",
+        "palette": [
+          "DDBC5A",
+          "F7F8F8",
+          "F1F0E8",
+          "81594F",
+          "F9FAFA"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Gudi Padwa Greeting",
+      "image_path": "art/art08.png",
+      "caption": "Here the greeting and the business are the same idea \u2014 building new beginnings. The Gudi is raised against construction cranes at golden hour with tipper trucks entering frame, so a cement and aggregates supplier gets a festival post that still says what it sells.",
+      "notes": "Sandi Enterprises \u2014 Gudi Padwa Greeting. Here the greeting and the business are the same idea \u2014 building new beginnings. The Gudi is raised against construction cranes at golden hour with tipper trucks entering frame, so a cement and aggregates supplier gets a festival post that still says what it sells.",
+      "meta": {
+        "client": "Sandi Enterprises",
+        "category": "Social \u00b7 Festival",
+        "format": "Portrait \u00b7 740\u00d7918px \u00b7 0.7MP",
+        "palette": [
+          "936944",
+          "D9B170",
+          "2A1E14",
+          "4E3725",
+          "7E3920"
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "Political Communication",
+      "subtitle": "A consistent greeting series for a serving minister.",
+      "caption": "3 pieces",
+      "meta": {
+        "number": "05",
+        "eyebrow": "Section 05"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Teachers' Day Greeting",
+      "image_path": "art/art13.png",
+      "caption": "Staged on a chalkboard, with slate, apple and globe props establishing the occasion instantly. The minister is cut out and lit to sit forward of the board, and the designation bar is pinned bottom-left as the fixed element across the whole series.",
+      "notes": "Mauvin Godinho \u00b7 BJP Goa \u2014 Teachers' Day Greeting. Staged on a chalkboard, with slate, apple and globe props establishing the occasion instantly. The minister is cut out and lit to sit forward of the board, and the designation bar is pinned bottom-left as the fixed element across the whole series.",
+      "meta": {
+        "client": "Mauvin Godinho \u00b7 BJP Goa",
+        "category": "Political",
+        "format": "Square \u00b7 1019\u00d71019px \u00b7 1.0MP",
+        "palette": [
+          "073C2B",
+          "414344",
+          "BBBDBD",
+          "7A7D6A",
+          "D7C9BE"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Ganesh Chaturthi Greeting",
+      "image_path": "art/art14.png",
+      "caption": "Built vertically for feed dominance. The idol is centred and richly lit against a deep field, the blessing runs in italic across the lower third, and the party mark holds the top corner. Different festival, identical structure \u2014 the series stays recognisable at thumbnail size.",
+      "notes": "Mauvin Godinho \u00b7 BJP Goa \u2014 Ganesh Chaturthi Greeting. Built vertically for feed dominance. The idol is centred and richly lit against a deep field, the blessing runs in italic across the lower third, and the party mark holds the top corner. Different festival, identical structure \u2014 the series stays recognisable at thumbnail size.",
+      "meta": {
+        "client": "Mauvin Godinho \u00b7 BJP Goa",
+        "category": "Political",
+        "format": "Portrait \u00b7 597\u00d7745px \u00b7 0.4MP",
+        "palette": [
+          "07042C",
+          "67483D",
+          "B19E8E",
+          "010724",
+          "331026"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Republic Day Greeting",
+      "image_path": "art/art15.png",
+      "caption": "Reduced to three elements: a tricolour wash, the Ashoka Chakra, and a salute. Restraint is the entire design decision \u2014 date and greeting lock into the lower right so the flag is never crowded, and the same designation bar closes the frame.",
+      "notes": "Mauvin Godinho \u00b7 BJP Goa \u2014 Republic Day Greeting. Reduced to three elements: a tricolour wash, the Ashoka Chakra, and a salute. Restraint is the entire design decision \u2014 date and greeting lock into the lower right so the flag is never crowded, and the same designation bar closes the frame.",
+      "meta": {
+        "client": "Mauvin Godinho \u00b7 BJP Goa",
+        "category": "Political",
+        "format": "Square \u00b7 1085\u00d71085px \u00b7 1.2MP",
+        "palette": [
+          "F8F9F0",
+          "10223B",
+          "2F2E43",
+          "CB6729",
+          "B29246"
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "Menu Design",
+      "subtitle": "High-density food menus engineered to stay scannable.",
+      "caption": "4 pieces",
+      "meta": {
+        "number": "06",
+        "eyebrow": "Section 06"
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Biryani, Gravies & Combos",
+      "image_path": "art/art16.png",
+      "caption": "A high-density menu that still scans. A deep red ground with gold rules divides veg and non-veg biryanis, gravies, breads, thalis and combos into vertical columns, and dotted leaders carry the eye from dish to price. Photography is rationed to one edge so it accents rather than crowds.",
+      "notes": "Restaurant Menu \u2014 Biryani, Gravies & Combos. A high-density menu that still scans. A deep red ground with gold rules divides veg and non-veg biryanis, gravies, breads, thalis and combos into vertical columns, and dotted leaders carry the eye from dish to price. Photography is rationed to one edge so it accents rather than crowds.",
+      "meta": {
+        "client": "Restaurant Menu",
+        "category": "Menu",
+        "format": "Landscape \u00b7 1378\u00d7979px \u00b7 1.3MP",
+        "palette": [
+          "D0D1D1",
+          "973625",
+          "E0E0E0",
+          "B7A896",
+          "F1F2F2"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Beverages, Policy & Location",
+      "image_path": "art/art17.png",
+      "caption": "The service panel. Beverages are priced in a tight table, operating policies become single icon lines instead of paragraphs, and the address is replaced with a drawn location map \u2014 faster for a customer than any written direction. A dish strip keeps the utility appetising.",
+      "notes": "Cinders Take Away \u2014 Beverages, Policy & Location. The service panel. Beverages are priced in a tight table, operating policies become single icon lines instead of paragraphs, and the address is replaced with a drawn location map \u2014 faster for a customer than any written direction. A dish strip keeps the utility appetising.",
+      "meta": {
+        "client": "Cinders Take Away",
+        "category": "Menu",
+        "format": "Landscape \u00b7 1378\u00d7979px \u00b7 1.3MP",
+        "palette": [
+          "871816",
+          "CFCECB",
+          "FEFEFE",
+          "9E6554",
+          "EFECE8"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Dum Biryani Menu",
+      "image_path": "art/art18.png",
+      "caption": "Charcoal-grill character built from wood grain, stencil marks and grill icons. Dum biryani listings sit above a full-width photographic strip that acts as a horizon line for the sheet, and a self-service note sets expectations before the customer reaches the counter.",
+      "notes": "Protaste Grill \u2014 Dum Biryani Menu. Charcoal-grill character built from wood grain, stencil marks and grill icons. Dum biryani listings sit above a full-width photographic strip that acts as a horizon line for the sheet, and a self-service note sets expectations before the customer reaches the counter.",
+      "meta": {
+        "client": "Protaste Grill",
+        "category": "Menu",
+        "format": "Landscape \u00b7 1185\u00d7844px \u00b7 1.0MP",
+        "palette": [
+          "AD322A",
+          "CEA975",
+          "A15D40",
+          "783025",
+          "AF342C"
+        ]
+      }
+    },
+    {
+      "type": "gallery",
+      "title": "Sandwiches, Rolls & Beverages",
+      "image_path": "art/art19.png",
+      "caption": "The companion sheet extends the range across three columns \u2014 sandwiches, kathi rolls, pizza, burgers, fried rice and beverages. Script section headers do the dividing so no extra rules are needed, keeping a long list feeling lighter than it is.",
+      "notes": "Protaste Grill \u2014 Sandwiches, Rolls & Beverages. The companion sheet extends the range across three columns \u2014 sandwiches, kathi rolls, pizza, burgers, fried rice and beverages. Script section headers do the dividing so no extra rules are needed, keeping a long list feeling lighter than it is.",
+      "meta": {
+        "client": "Protaste Grill",
+        "category": "Menu",
+        "format": "Landscape \u00b7 1209\u00d7862px \u00b7 1.0MP",
+        "palette": [
+          "AE332B",
+          "AC473D",
+          "BA7F6D",
+          "A73029",
+          "A3352C"
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "quote": "Enthusiastic members. Great for luxury brands. They are fast to learn about business needs and strategise digital marketing accordingly.",
+      "attribution": "Moin \u00b7 client testimonial, sanctify.in"
+    },
+    {
+      "type": "table",
+      "title": "Design disciplines",
+      "subtitle": "What this portfolio covers, and the formats delivered.",
+      "table": {
+        "headers": [
+          "Discipline",
+          "Pieces",
+          "Formats delivered"
+        ],
+        "rows": [
+          [
+            "Packaging Design",
+            "3",
+            "Tub wrap artwork, flavour range systems"
+          ],
+          [
+            "Print & Flyers",
+            "3",
+            "A4 leaflets, double-sided takeaway collateral"
+          ],
+          [
+            "Corporate Catalogue",
+            "2",
+            "Multi-page spreads, spec tables"
+          ],
+          [
+            "Social & Festival",
+            "4",
+            "Square and portrait posts, map thumbnails"
+          ],
+          [
+            "Political Communication",
+            "3",
+            "Greeting series, feed-native posts"
+          ],
+          [
+            "Menu Design",
+            "4",
+            "Multi-column menus, service panels"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "contact",
+      "title": "Let's design\nwhat's next.",
+      "subtitle": "Award-winning advertising & digital marketing agency in Goa \u2014 design, web, SEO and social under one roof.",
+      "caption": "advertise to promote....",
+      "meta": {
+        "logo": "/projects/sandbox/.deck-build/logo_light.png",
+        "contact": [
+          [
+            "Call",
+            "+91 99233 52923"
+          ],
+          [
+            "Studio",
+            "Vasco, Goa, India"
+          ],
+          [
+            "Web",
+            "www.sanctify.in"
+          ]
+        ]
+      }
+    }
+  ]
+}
