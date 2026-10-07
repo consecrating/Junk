@@ -211,21 +211,33 @@
     });
   }
 
-  /* ---------- blog pagination ---------- */
+  /* ---------- blog filter + pagination ---------- */
   (function () {
     var grid = document.getElementById('blogGrid');
     var nav = document.getElementById('pagination');
+    var pills = document.getElementById('filterPills');
+    var noRes = document.getElementById('noResults');
     if (!grid || !nav) return;
     var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-blog-card]'));
-    var per = 6, page = 1, pages = Math.ceil(cards.length / per);
+    var per = 6, page = 1, filter = 'all';
+    function visible() {
+      return cards.filter(function (c) {
+        return filter === 'all' || c.getAttribute('data-cat') === filter;
+      });
+    }
     function go(p) {
+      var list = visible();
+      var pages = Math.max(1, Math.ceil(list.length / per));
       page = Math.max(1, Math.min(pages, p));
-      cards.forEach(function (c, i) {
+      cards.forEach(function (c) { c.style.display = 'none'; });
+      list.forEach(function (c, i) {
         var show = Math.floor(i / per) + 1 === page;
         c.style.display = show ? '' : 'none';
         if (show) c.classList.add('in-view');
       });
+      if (noRes) noRes.hidden = list.length > 0;
       nav.innerHTML = '';
+      nav.style.display = pages > 1 ? '' : 'none';
       function btn(label, p, active, disabled, aria) {
         var b = document.createElement('button');
         b.textContent = label; b.type = 'button';
@@ -239,6 +251,13 @@
       for (var i = 1; i <= pages; i++) btn(String(i), i, i === page, false, 'Page ' + i);
       btn('\u203A', page + 1, false, page === pages, 'Next page');
     }
+    if (pills) pills.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      pills.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      filter = b.getAttribute('data-filter');
+      go(1);
+    });
     go(1);
   })();
 
