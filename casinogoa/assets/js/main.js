@@ -211,6 +211,37 @@
     });
   }
 
+  /* ---------- blog pagination ---------- */
+  (function () {
+    var grid = document.getElementById('blogGrid');
+    var nav = document.getElementById('pagination');
+    if (!grid || !nav) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-blog-card]'));
+    var per = 6, page = 1, pages = Math.ceil(cards.length / per);
+    function go(p) {
+      page = Math.max(1, Math.min(pages, p));
+      cards.forEach(function (c, i) {
+        var show = Math.floor(i / per) + 1 === page;
+        c.style.display = show ? '' : 'none';
+        if (show) c.classList.add('in-view');
+      });
+      nav.innerHTML = '';
+      function btn(label, p, active, disabled, aria) {
+        var b = document.createElement('button');
+        b.textContent = label; b.type = 'button';
+        if (active) b.classList.add('active');
+        if (disabled) b.disabled = true;
+        if (aria) b.setAttribute('aria-label', aria);
+        b.addEventListener('click', function () { go(p); grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+        nav.appendChild(b);
+      }
+      btn('\u2039', page - 1, false, page === 1, 'Previous page');
+      for (var i = 1; i <= pages; i++) btn(String(i), i, i === page, false, 'Page ' + i);
+      btn('\u203A', page + 1, false, page === pages, 'Next page');
+    }
+    go(1);
+  })();
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var btn = item.querySelector('.faq-q');

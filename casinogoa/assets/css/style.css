@@ -999,3 +999,10 @@ body.notice-off{--notice-h:0px}
 .pkg-mini strong{color:var(--gold2)}
 @media(max-width:1024px){.book-layout{grid-template-columns:1fr}.book-aside{position:static}}
 @media(max-width:640px){.fgrid{grid-template-columns:1fr}}
+
+/* ============ Blog pagination ============ */
+.pagination{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:52px}
+.pagination button{background:transparent;border:1px solid rgba(232,182,76,.3);color:var(--gold2);min-width:46px;height:46px;padding:0 12px;border-radius:13px;cursor:pointer;font-family:inherit;font-size:.95rem;font-weight:600;transition:all .2s}
+.pagination button:hover:not(:disabled){border-color:var(--gold);color:#fff;transform:translateY(-2px)}
+.pagination button.active{background:var(--grad);color:#0a0705;border-color:transparent;font-weight:700}
+.pagination button:disabled{opacity:.3;cursor:default}
