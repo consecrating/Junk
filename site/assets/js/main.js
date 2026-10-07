@@ -285,6 +285,71 @@
     });
   });
 
+  /* ---------- hover tracker: cursor-following preview ---------- */
+  (function () {
+    if (!window.matchMedia('(pointer:fine)').matches) return;
+    var list = document.querySelector('.track-list');
+    var float = document.querySelector('.track-float');
+    if (!list || !float) return;
+    var img = float.querySelector('img');
+    var tx = 0, ty = 0, x = 0, y = 0, raf = null;
+    function loop() {
+      x += (tx - x) * 0.14;
+      y += (ty - y) * 0.14;
+      var tilt = Math.max(-10, Math.min(10, (tx - x) * 0.05));
+      float.style.transform = 'translate(' + Math.round(x - 150) + 'px,' + Math.round(y - 190) + 'px) rotate(' + tilt.toFixed(2) + 'deg)';
+      if (Math.abs(tx - x) > 0.4 || Math.abs(ty - y) > 0.4) raf = requestAnimationFrame(loop);
+      else raf = null;
+    }
+    list.addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      if (!raf) raf = requestAnimationFrame(loop);
+    });
+    list.querySelectorAll('.track-row').forEach(function (row) {
+      row.addEventListener('mouseenter', function () {
+        var src = row.getAttribute('data-img');
+        if (src && img.getAttribute('src') !== src) img.setAttribute('src', src);
+        float.classList.add('on');
+      });
+    });
+    list.addEventListener('mouseleave', function () { float.classList.remove('on'); });
+  })();
+
+  /* ---------- 3D scroll section ---------- */
+  (function () {
+    var sec = document.getElementById('scroll3d');
+    if (!sec || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var cards = Array.prototype.slice.call(sec.querySelectorAll('.s3d-card'));
+    var bar = sec.querySelector('.s3d-progress i');
+    var n = cards.length, ticking = false;
+    function ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+    function render() {
+      ticking = false;
+      var rect = sec.getBoundingClientRect();
+      var total = sec.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, -rect.top / total));
+      if (bar) bar.style.width = (p * 100).toFixed(2) + '%';
+      cards.forEach(function (card, i) {
+        var local = p * n - i, o, txv, rz, ry;
+        if (local <= 0 || local >= 1) {
+          o = 0; txv = local <= 0 ? 55 : -55; ry = local <= 0 ? -38 : 38; rz = -380;
+        } else {
+          var e = ease(local);
+          o = Math.sin(local * Math.PI);
+          txv = (0.5 - e) * 110;
+          ry = (e - 0.5) * 76;
+          rz = -380 * Math.abs(e - 0.5) * 2;
+        }
+        card.style.opacity = Math.max(0, Math.min(1, o)).toFixed(3);
+        card.style.transform = 'translate(-50%,-50%) translateX(' + txv.toFixed(1) + 'vw) translateZ(' + rz.toFixed(0) + 'px) rotateY(' + ry.toFixed(1) + 'deg)';
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(render); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    render();
+  })();
+
   /* ---------- footer year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
