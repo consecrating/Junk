@@ -188,6 +188,29 @@
     });
   }
 
+  /* ---------- contact form ---------- */
+  var cForm = document.getElementById('contactForm');
+  if (cForm) {
+    cForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var valid = true;
+      cForm.querySelectorAll('[required]').forEach(function (input) {
+        var bad = !input.value.trim() ||
+          (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value));
+        input.classList.toggle('input-error', bad);
+        if (bad) valid = false;
+      });
+      if (!valid) return;
+      var ok = document.getElementById('contactOk');
+      if (ok) { ok.classList.add('show'); ok.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+      cForm.querySelectorAll('input, textarea').forEach(function (i) { i.value = ''; });
+      setTimeout(function () { if (ok) ok.classList.remove('show'); }, 8000);
+    });
+    cForm.querySelectorAll('[required]').forEach(function (input) {
+      input.addEventListener('input', function () { input.classList.remove('input-error'); });
+    });
+  }
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var btn = item.querySelector('.faq-q');
@@ -355,6 +378,20 @@
   /* ---------- booking: package card select ---------- */
   var packs = document.querySelectorAll('.bpack');
   var packSel = document.getElementById('bkPack');
+  var PACK_PRICES = { ideal: 2500, super: 3000, luxury: 4000, supreme: 5500 };
+  var PACK_NAMES = { ideal: 'CP Ideal', super: 'CP Super', luxury: 'CP Super Luxury', supreme: 'CP Supreme' };
+  function inr(n) { return '\u20B9' + n.toLocaleString('en-IN'); }
+  function updateTotal() {
+    var totalEl = document.getElementById('bookTotal');
+    var noteEl = document.getElementById('bookTotalNote');
+    if (!totalEl) return;
+    var val = packSel ? packSel.value : 'super';
+    var guestsEl = document.getElementById('bkGuests');
+    var g = guestsEl ? Math.max(1, parseInt(guestsEl.value, 10) || 1) : 1;
+    var total = (PACK_PRICES[val] || 3000) * g;
+    totalEl.textContent = inr(total);
+    if (noteEl) noteEl.textContent = g + (g === 1 ? ' guest' : ' guests') + ' \u00D7 ' + (PACK_NAMES[val] || val);
+  }
   function selectPack(val) {
     packs.forEach(function (c) {
       var on = c.getAttribute('data-pack') === val;
@@ -362,6 +399,7 @@
       c.setAttribute('aria-checked', on ? 'true' : 'false');
     });
     if (packSel) packSel.value = val;
+    updateTotal();
   }
   packs.forEach(function (c) {
     c.addEventListener('click', function () { selectPack(c.getAttribute('data-pack')); });
@@ -370,6 +408,23 @@
     });
   });
   if (packSel) packSel.addEventListener('change', function () { selectPack(packSel.value); });
+  var guestsInput = document.getElementById('bkGuests');
+  if (guestsInput) guestsInput.addEventListener('input', updateTotal);
+  updateTotal();
+
+  /* ---------- cautionary notice ---------- */
+  (function () {
+    var bar = document.getElementById('notice');
+    var btn = document.getElementById('noticeClose');
+    if (!bar || !btn) return;
+    try {
+      if (localStorage.getItem('cpNoticeOff') === '1') document.body.classList.add('notice-off');
+    } catch (e) {}
+    btn.addEventListener('click', function () {
+      document.body.classList.add('notice-off');
+      try { localStorage.setItem('cpNoticeOff', '1'); } catch (e) {}
+    });
+  })();
 
   /* ---------- respect reduced motion for video ---------- */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
