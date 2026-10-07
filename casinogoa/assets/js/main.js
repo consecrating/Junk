@@ -287,7 +287,7 @@
         chips.forEach(function (c) { c.classList.remove('active'); });
         chip.classList.add('active');
         var f = chip.getAttribute('data-filter');
-        document.querySelectorAll('.ev-row').forEach(function (row) {
+        document.querySelectorAll('.ev-row, .ev-gala').forEach(function (row) {
           row.classList.toggle('hidden', f !== 'all' && row.getAttribute('data-cat') !== f);
         });
       });

@@ -1059,3 +1059,43 @@ body.notice-off{--notice-h:0px}
   .blog-head{flex-direction:column;align-items:flex-start;margin-bottom:32px}
   .bf-body{padding:26px}
 }
+
+/* ============ Premium gala ticket card ============ */
+.ev-gala{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(232,182,76,.45);margin-top:10px;box-shadow:0 50px 110px -50px rgba(0,0,0,.9),inset 0 0 0 1px rgba(255,255,255,.04)}
+.gala-bg{position:absolute;inset:0}
+.gala-bg img{width:100%;height:100%;object-fit:cover;opacity:.3;transform:scale(1.04)}
+.gala-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(820px 320px at 50% -40px,rgba(232,182,76,.22),transparent 70%),linear-gradient(180deg,rgba(10,7,5,.62) 0%,rgba(10,7,5,.82) 55%,rgba(10,7,5,.94) 100%)}
+.gala-suit{position:absolute;font-size:9rem;line-height:1;color:rgba(232,182,76,.07);z-index:1;pointer-events:none;user-select:none}
+.gala-suit.s1{top:-18px;left:26px;transform:rotate(-14deg)}
+.gala-suit.s2{bottom:-26px;right:30px;transform:rotate(12deg)}
+.gala-suit .red{color:rgba(200,60,70,.08)}
+.gala-inner{position:relative;z-index:2;padding:clamp(40px,6vw,72px) clamp(26px,6vw,80px);text-align:center}
+.gala-eyebrow{color:var(--gold2);font-size:.78rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;margin:0 0 16px}
+.gala-inner h3{font-family:var(--font-d);font-size:clamp(2.2rem,4.6vw,3.6rem);letter-spacing:.01em;margin:0 0 12px;color:#fff}
+.gala-sub{color:var(--muted);font-size:1.05rem;max-width:56ch;margin:0 auto}
+.gala-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:38px auto 40px;max-width:980px;padding:30px 10px;border-top:1px solid rgba(232,182,76,.28);border-bottom:1px solid rgba(232,182,76,.28)}
+.gala-stats>div{position:relative}
+.gala-stats>div+div::before{content:'';position:absolute;left:-11px;top:12%;height:76%;width:1px;background:linear-gradient(180deg,transparent,rgba(232,182,76,.35),transparent)}
+.gala-stats span{display:block;font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-bottom:10px}
+.gala-stats strong{color:#fff;font-size:1.06rem;font-weight:600;white-space:nowrap}
+@media(max-width:860px){.gala-stats{grid-template-columns:repeat(2,1fr);gap:26px}.gala-stats>div+div::before{display:none}.gala-stats strong{white-space:normal}}
+@media(max-width:520px){.gala-stats{grid-template-columns:1fr 1fr;gap:20px}}
+
+/* glowing gold button */
+.btn-glow{position:relative;overflow:hidden;box-shadow:0 14px 46px -10px rgba(232,182,76,.65);transition:transform .25s ease,box-shadow .25s ease}
+.btn-glow:hover{transform:translateY(-3px);box-shadow:0 20px 64px -10px rgba(232,182,76,.9)}
+.btn-glow::after{content:'';position:absolute;top:0;left:-90%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:btnshine 3.6s ease-in-out infinite;pointer-events:none}
+@keyframes btnshine{0%,55%{left:-90%}100%{left:190%}}
+@media(prefers-reduced-motion:reduce){.btn-glow::after{animation:none}}
+
+/* ============ Premium CTA band ============ */
+.cta-premium{position:relative;overflow:hidden;text-align:center;padding:clamp(100px,13vw,170px) 0}
+.cta-bg{position:absolute;inset:0}
+.cta-bg img{width:100%;height:100%;object-fit:cover;opacity:.3;transform:scale(1.06);animation:ctadrift 26s ease-in-out infinite alternate}
+@keyframes ctadrift{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.12) translateY(-2%)}}
+.cta-shade{position:absolute;inset:0;background:radial-gradient(900px 420px at 50% 108%,rgba(232,182,76,.16),transparent 70%),radial-gradient(700px 340px at 50% -10%,rgba(232,182,76,.1),transparent 70%),linear-gradient(180deg,#0a0705 0%,rgba(10,7,5,.45) 38%,rgba(10,7,5,.45) 62%,#0a0705 100%)}
+.cta-premium .container{position:relative;z-index:2}
+.cta-premium h2{font-family:var(--font-d);font-size:clamp(2.8rem,7vw,5.2rem);letter-spacing:.015em;margin:18px 0 16px;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+.cta-premium p{color:var(--muted);font-size:1.1rem;margin:0 0 36px}
+.cta-premium .btn{font-size:1rem;padding:18px 46px}
+@media(prefers-reduced-motion:reduce){.cta-bg img{animation:none}}
