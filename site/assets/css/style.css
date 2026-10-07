@@ -896,3 +896,10 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 }
 /* V8 fix: clear the fixed nav in the 3D sticky viewport */
 .s3d-head{padding-top:96px}
+
+/* ============ V9 — casino floor video ============ */
+.floor-video{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);aspect-ratio:4/3;background:#0d0906;border:1px solid rgba(232,182,76,.3)}
+.floor-video video{width:100%;height:100%;object-fit:cover;display:block}
+.floor-sheen{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 42%,rgba(247,221,138,.13) 50%,transparent 58%);background-size:280% 100%;animation:sheen 8s ease-in-out infinite}
+@keyframes sheen{0%{background-position:130% 0}60%,100%{background-position:-130% 0}}
+@media(prefers-reduced-motion:reduce){.floor-sheen{animation:none}}
