@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://casinogoa.cpofficial.in/sitemap.xml
