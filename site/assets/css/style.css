@@ -790,3 +790,19 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
   .hslide-bg,.hslide-cards,.hprog i{animation:none!important}
 }
 .hero-slider .hdots{bottom:88px}
+
+/* ============ V5 — marquee inside hero, refined slider chrome ============ */
+.hero-foot{position:absolute;left:0;right:0;bottom:0;z-index:5;background:linear-gradient(180deg,transparent,rgba(8,5,3,.88) 55%)}
+.hero-foot .bulbs{padding:14px 0 10px;margin:0}
+.hero-foot .marquee{border-top:1px solid rgba(232,182,76,.35);border-bottom:0;background:transparent}
+.hero-slider .hdots{bottom:138px}
+.hdot{width:46px;height:2px;border-radius:2px;background:rgba(232,182,76,.3)}
+.hdot.active{width:64px;background:var(--grad)}
+.harrow{background:none;border:0;width:auto;height:auto;padding:10px;font-size:2.6rem;line-height:1;color:rgba(232,182,76,.55);backdrop-filter:none}
+.harrow:hover{background:none;color:var(--gold2);border-color:transparent;transform:translateY(-50%) scale(1.18);box-shadow:none}
+.hprev{left:30px}.hnext{right:30px}
+.hcount{position:absolute;right:38px;bottom:134px;z-index:5;color:var(--muted);font:600 .8rem var(--font-b);letter-spacing:.3em}
+.hcount span{color:var(--gold2);font-size:1rem}
+.hcount em{font-style:normal;margin:0 8px;opacity:.5}
+.hslide .hero-inner{padding-bottom:215px}
+@media(max-width:900px){.hcount{display:none}.hero-slider .hdots{bottom:126px}}

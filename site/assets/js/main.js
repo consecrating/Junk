@@ -227,7 +227,7 @@
     var dots = slider.querySelectorAll('.hdot');
     var prev = slider.querySelector('.hprev');
     var next = slider.querySelector('.hnext');
-    var prog = slider.querySelector('.hprog i');
+    var hCur = document.getElementById('hCur');
     var cur = 0, timer = null, DUR = 6500;
     function go(n) {
       slides[cur].classList.remove('active');
@@ -235,7 +235,7 @@
       cur = (n + slides.length) % slides.length;
       slides[cur].classList.add('active');
       if (dots[cur]) dots[cur].classList.add('active');
-      if (prog) { prog.style.animation = 'none'; void prog.offsetWidth; prog.style.animation = ''; }
+      if (hCur) hCur.textContent = ('0' + (cur + 1)).slice(-2);
     }
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
     function auto() { stop(); timer = setInterval(function () { go(cur + 1); }, DUR); }
