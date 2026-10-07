@@ -36,6 +36,18 @@
     });
   });
 
+  /* ---------- nav active link ---------- */
+  (function () {
+    var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    if (page === '') page = 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').toLowerCase().split('/').pop();
+      if (href === page || (page.indexOf('post-') === 0 && href === 'blog.html')) {
+        a.classList.add('active');
+      }
+    });
+  })();
+
   /* ---------- reveal on scroll ---------- */
   var revealEls = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window) {
