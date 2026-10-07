@@ -812,3 +812,47 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
    content sits exactly midway between the fixed nav and the hero foot. */
 .hslide{padding:74px 0 104px}
 .hslide .hero-inner{padding-top:0;padding-bottom:0}
+
+/* ============ V7 — pricing packs + newsletter ============ */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch}
+.pack{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);padding:40px 34px;background:linear-gradient(170deg,rgba(232,182,76,.05),rgba(232,182,76,.01));transition:transform .35s,border-color .35s,box-shadow .35s}
+.pack:hover{transform:translateY(-8px);border-color:rgba(232,182,76,.55)}
+.pack.featured{border-color:var(--gold);background:linear-gradient(160deg,#241806,#0e0905);box-shadow:0 30px 70px -24px rgba(232,182,76,.45);transform:scale(1.03)}
+.pack.featured:hover{transform:scale(1.03) translateY(-8px)}
+.pack-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font:800 .68rem var(--font-b);letter-spacing:.22em;text-transform:uppercase;color:#221503;background:var(--grad);border-radius:100px;padding:7px 18px;white-space:nowrap}
+.pack h3{color:#fff;font-size:1.4rem;margin-bottom:6px}
+.pack-sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.pack-price{font-family:var(--font-d);font-size:2.6rem;color:var(--gold2);line-height:1;margin-bottom:4px}
+.pack-price small{font-family:var(--font-b);font-size:.78rem;color:var(--muted);letter-spacing:.08em}
+.pack ul{list-style:none;margin:24px 0 30px;padding:0;display:grid;gap:12px;flex:1}
+.pack ul li{color:#d8cdb4;font-size:.93rem;padding-left:28px;position:relative;line-height:1.5}
+.pack ul li::before{content:"\2713";position:absolute;left:0;color:var(--gold);font-weight:700}
+.pack .btn{width:100%}
+.pack-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:28px}
+
+/* selectable package cards (booking page) */
+.pack-pick{cursor:pointer;text-align:left;width:100%;color:inherit;font:inherit}
+.pack-pick.sel{border-color:var(--gold2);box-shadow:0 0 0 1px var(--gold2),0 20px 50px -20px rgba(232,182,76,.5)}
+.pack-pick .pack-price{font-size:2rem}
+.pack-pick ul{margin:18px 0 0}
+
+/* newsletter band */
+.news-band{position:relative;overflow:hidden;border-radius:calc(var(--radius) + 8px);border:1px solid rgba(232,182,76,.4);background:linear-gradient(140deg,#1c1206,#0b0704 60%);padding:clamp(40px,5vw,70px);display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.news-band::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 85% 20%,rgba(232,182,76,.14),transparent 60%);pointer-events:none}
+.news-band h2{font-family:var(--font-d);font-weight:400;text-transform:uppercase;font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;line-height:1.15;margin-bottom:14px;position:relative}
+.news-band p{color:var(--muted);margin:0;position:relative}
+.news-form{display:flex;gap:12px;position:relative;z-index:1}
+.news-form input{flex:1;min-width:0;background:rgba(255,255,255,.06);border:1px solid rgba(232,182,76,.4);border-radius:100px;padding:16px 24px;color:#fff;font:500 .95rem var(--font-b);outline:none;transition:border-color .3s}
+.news-form input:focus{border-color:var(--gold)}
+.news-form input::placeholder{color:#8a7c5f}
+.news-ok{display:none;align-items:center;gap:10px;color:var(--gold2);font-weight:600;position:relative;z-index:1}
+.news-ok.show{display:flex}
+@media(max-width:900px){
+  .blog-grid,.pricing{grid-template-columns:1fr}
+  .pack.featured{transform:none}
+  .pack.featured:hover{transform:translateY(-8px)}
+  .news-band{grid-template-columns:1fr}
+  .news-form{flex-direction:column}
+  .news-form .btn{width:100%}
+}

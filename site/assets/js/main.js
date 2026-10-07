@@ -252,6 +252,39 @@
     auto();
   })();
 
+  /* ---------- newsletter signup ---------- */
+  (function () {
+    var nf = document.getElementById('newsForm');
+    if (!nf) return;
+    nf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var em = document.getElementById('newsEmail');
+      var ok = em && /.+@.+\..+/.test(em.value.trim());
+      if (ok) {
+        nf.style.display = 'none';
+        document.getElementById('newsOk').classList.add('show');
+      } else {
+        em.style.borderColor = '#e63956';
+        em.focus();
+      }
+    });
+  })();
+
+  /* ---------- booking package pick cards ---------- */
+  document.querySelectorAll('.pack-pick').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var v = card.getAttribute('data-pack');
+      var sel = document.getElementById('fPack');
+      if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text === v) { sel.selectedIndex = i; break; }
+        }
+      }
+      document.querySelectorAll('.pack-pick').forEach(function (c) { c.classList.remove('sel'); });
+      card.classList.add('sel');
+    });
+  });
+
   /* ---------- footer year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
