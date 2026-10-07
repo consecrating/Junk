@@ -60,37 +60,62 @@
 
 <main>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg" role="img" aria-label="Best casino night in Goa — DJ performing before a massive crowd"></div>
-  <div class="hero-shade"></div>
-  <div class="orb orb-a"></div>
-  <div class="orb orb-b"></div>
-  <div class="hero-chip rv" style="--d:.7s" aria-hidden="true"><strong>EST.</strong><span>2014 · GOA</span></div>
-
-  <div class="container hero-inner">
-    <p class="eyebrow hero-eyebrow rv">Best Casino in Goa &middot; Live DJ &middot; VIP Tables</p>
-    <h1 class="hero-title">
-      <span class="rv" style="--d:.05s">Goa's Best</span>
-      <span class="grad rv" style="--d:.18s">Casino Nights</span>
-    </h1>
-    <p class="hero-sub rv" style="--d:.3s">PULSE stages the most talked-about casino nights in Goa — professional dealers, live DJs, high-roller tables and festival-scale production. Casino-style entertainment, zero real-money gambling.</p>
-    <div class="hero-actions rv" style="--d:.42s">
-      <a href="booking.html" class="btn">Book Your Night</a>
-      <a href="events.html" class="btn btn-ghost">Explore Events</a>
+<!-- ============ HERO SLIDER ============ -->
+<section class="hero hero-slider" id="heroSlider" aria-label="Featured nights">
+  <div class="hslides">
+    <div class="hslide active">
+      <div class="hslide-bg" style="background-image:url('assets/images/cards-fan.jpg')" role="img" aria-label="Fanned golden playing cards — casino nights in Goa"></div>
+      <div class="hero-shade"></div>
+      <div class="mini-cards hslide-cards" aria-hidden="true">
+        <div class="mc black"><b>A</b><i>&#9824;</i></div>
+        <div class="mc red"><b>K</b><i>&#9829;</i></div>
+        <div class="mc red"><b>Q</b><i>&#9830;</i></div>
+      </div>
+      <div class="container hero-inner">
+        <p class="eyebrow hero-eyebrow">&#9824; Best Casino in Goa</p>
+        <h1 class="hero-title"><span>Goa's Best</span><span class="grad">Casino Nights</span></h1>
+        <p class="hero-sub">Velvet-rope casino nights with live dealers, table experiences and headline DJ sets. Pure theatre — zero real-money gambling.</p>
+        <div class="hero-actions">
+          <a href="booking.html" class="btn">Book Your Night</a>
+          <a href="events.html" class="btn btn-ghost">Explore Events</a>
+        </div>
+      </div>
     </div>
-
-    <div class="hero-eq rv" style="--d:.55s" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <div class="hslide">
+      <div class="hslide-bg" style="background-image:url('assets/images/hero-bg.jpg')" role="img" aria-label="DJ performing before a massive crowd in Goa"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow hero-eyebrow">&#9829; Live DJ &middot; Festivals</p>
+        <p class="hero-title"><span>Own the</span><span class="grad">Night</span></p>
+        <p class="hero-sub">PULSE is Goa's high-voltage DJ and entertainment crew — club takeovers, festival stages and private parties, all built around the music you love.</p>
+        <div class="hero-actions">
+          <a href="events.html" class="btn">See Events</a>
+          <a href="about.html" class="btn btn-ghost">Our Story</a>
+        </div>
+      </div>
     </div>
-
-    <div class="hero-stats rv" style="--d:.65s">
-      <div><strong data-count="480">0</strong><span>+ shows a year</span></div>
-      <div><strong data-count="120">0</strong><span>K+ ravers moved</span></div>
-      <div><strong data-count="25">0</strong><span>+ resident artists</span></div>
+    <div class="hslide">
+      <div class="hslide-bg" style="background-image:url('assets/images/event-4.jpg')" role="img" aria-label="Masquerade gala ballroom — VIP nights in Goa"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow hero-eyebrow">&#9830; VIP &middot; High Roller</p>
+        <p class="hero-title"><span>Play it</span><span class="grad">VIP</span></p>
+        <p class="hero-sub">Private lounges, dedicated hosts and the room's best sightlines. Your crew, your table, your night.</p>
+        <div class="hero-actions">
+          <a href="booking.html" class="btn">Book a Table</a>
+          <a href="events.html" class="btn btn-ghost">Upcoming Nights</a>
+        </div>
+      </div>
     </div>
   </div>
-
+  <button class="harrow hprev" aria-label="Previous slide">&#8249;</button>
+  <button class="harrow hnext" aria-label="Next slide">&#8250;</button>
+  <div class="hdots" role="tablist" aria-label="Hero slides">
+    <button class="hdot active" aria-label="Slide 1: Casino Nights"></button>
+    <button class="hdot" aria-label="Slide 2: Live DJ"></button>
+    <button class="hdot" aria-label="Slide 3: VIP"></button>
+  </div>
+  <div class="hprog" aria-hidden="true"><i></i></div>
   <a class="scroll-hint" href="#games" aria-label="Scroll down"><span></span></a>
 </section>
 

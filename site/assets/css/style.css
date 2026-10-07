@@ -739,3 +739,54 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
   .ev-row{grid-template-columns:1fr;grid-template-areas:"date" "thumb" "info" "cta"}
   .floor-media .mini-cards{display:none}
 }
+
+/* ============ V4 — 3D hero slider (full viewport, no scroll) ============ */
+.hero-slider{height:100svh;min-height:640px;max-height:1100px}
+.hero-slider .hero-title{font-size:clamp(3rem,7.5vw,6rem)}
+.hero-slider .hero-sub{margin-bottom:34px}
+.hslides{position:absolute;inset:0;perspective:1400px;overflow:hidden}
+.hslide{
+  position:absolute;inset:0;display:flex;align-items:center;
+  opacity:0;visibility:hidden;transform:translateX(90px) rotateY(-9deg);transform-origin:18% 50%;
+  transition:opacity .7s ease,transform 1s cubic-bezier(.22,.8,.24,1),visibility 0s linear 1s;
+}
+.hslide.active{
+  opacity:1;visibility:visible;transform:translateX(0) rotateY(0);z-index:2;
+  transition:opacity .7s ease,transform 1.1s cubic-bezier(.22,.8,.24,1),visibility 0s;
+}
+.hslide-bg{position:absolute;inset:-4%;background-size:cover;background-position:center;will-change:transform}
+.hslide.active .hslide-bg{animation:kb 7.5s ease-out forwards}
+.hslide:nth-child(even).active .hslide-bg{animation-name:kb2}
+@keyframes kb{from{transform:scale(1.15) rotate(.5deg)}to{transform:scale(1.03) rotate(0)}}
+@keyframes kb2{from{transform:scale(1.02)}to{transform:scale(1.14) rotate(-.5deg)}}
+.hslide .hero-inner{position:relative;z-index:3;padding-top:calc(var(--nav-h) + 10px);padding-bottom:70px}
+.hslide .hero-inner>*{opacity:0;transform:translateY(36px)}
+.hslide.active .hero-inner>*{animation:hRise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hslide.active .hero-inner>*:nth-child(1){animation-delay:.2s}
+.hslide.active .hero-inner>*:nth-child(2){animation-delay:.32s}
+.hslide.active .hero-inner>*:nth-child(3){animation-delay:.46s}
+.hslide.active .hero-inner>*:nth-child(4){animation-delay:.6s}
+@keyframes hRise{to{opacity:1;transform:none}}
+.hslide-cards{position:absolute;right:7%;bottom:16%;z-index:3;animation:cardFloat 5s ease-in-out infinite}
+@keyframes cardFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+.harrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:54px;height:54px;border-radius:50%;cursor:pointer;
+  background:rgba(10,7,5,.45);border:1px solid rgba(232,182,76,.5);color:var(--gold2);
+  font-size:1.8rem;line-height:1;backdrop-filter:blur(6px);transition:all .3s;
+}
+.harrow:hover{background:var(--grad);color:#221503;border-color:transparent}
+.hprev{left:26px}.hnext{right:26px}
+.hdots{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:12px}
+.hdot{width:38px;height:5px;border-radius:3px;border:0;padding:0;background:rgba(232,182,76,.28);cursor:pointer;transition:all .35s}
+.hdot.active{background:var(--grad);box-shadow:0 0 12px rgba(232,182,76,.7);width:56px}
+.hprog{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(232,182,76,.14);z-index:5}
+.hprog i{display:block;height:100%;background:var(--grad);transform-origin:left;animation:hprog 6.5s linear infinite}
+@keyframes hprog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:900px){.hslide-cards{display:none}.harrow{display:none}}
+@media(prefers-reduced-motion:reduce){
+  .hslide{transition:none;transform:none}
+  .hslide .hero-inner>*{animation:none!important;opacity:1;transform:none}
+  .hslide-bg,.hslide-cards,.hprog i{animation:none!important}
+}
+.hero-slider .hdots{bottom:88px}
