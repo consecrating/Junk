@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Table — PULSE DJ & Entertainment, Goa</title>
+<meta name="description" content="Reserve your table at PULSE nights: priority entry, dedicated host and the best corner of the floor. Confirmation within 24 hours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0705'/%3E%3Cpath d='M14 40 L24 40 L28 24 L34 48 L38 32 L42 40 L50 40' stroke='%23e8b64c' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-eq"><span></span><span></span><span></span><span></span><span></span></div>
+  <p>PULSE</p>
+</div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="PULSE home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7dd8a"/><stop offset="1" stop-color="#e8b64c"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#161006"/><path d="M14 40 L24 40 L28 24 L34 48 L38 32 L42 40 L50 40" stroke="url(#lg)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>PULSE</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="booking.html" class="btn btn-sm">Book a Table</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/images/hero-bg.jpg')" role="img" aria-label="Crowd at a PULSE night"></div>
+  <div class="ph-shade"></div>
+  <div class="container">
+    <p class="crumbs rv"><a href="index.html">Home</a><b>&rsaquo;</b>Booking</p>
+    <h1 class="rv" style="--d:.08s">Book your <span class="grad">table</span></h1>
+    <p class="rv" style="--d:.16s">Skip the line and own your corner of the floor. Tell us the night and the crew size — we handle the rest.</p>
+  </div>
+</section>
+
+<div class="bulbs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="section">
+  <div class="container booking-grid">
+    <div class="booking-info">
+      <p class="eyebrow rv">Reservations</p>
+      <h2 class="h2 rv" style="--d:.08s">Your seat at<br>the <span class="grad">loudest</span> table</h2>
+      <p class="lead rv" style="--d:.14s">Every reservation includes priority entry, a dedicated host and a table with the room's best sightlines to the booth.</p>
+      <ul class="checklist rv" style="--d:.2s">
+        <li>Priority entry before 11 PM</li>
+        <li>Dedicated host for your table</li>
+        <li>Confirmation within 24 hours</li>
+      </ul>
+      <div class="booking-note rv" style="--d:.26s">
+        <strong>Planning something bigger?</strong>
+        <span>Weddings, brand nights and full buyouts — write to <a href="mailto:hello@pulsegoa.in">hello@pulsegoa.in</a>.</span>
+      </div>
+    </div>
+
+    <form class="book-form rv" style="--d:.18s" id="bookForm" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="fName">Name</label><input id="fName" name="name" type="text" placeholder="Your name" required></div>
+        <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" placeholder="+91 ..." required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label for="fDate">Night</label><input id="fDate" name="date" type="date" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="fGuests">Guests</label>
+          <select id="fGuests" name="guests"><option>2 guests</option><option>4 guests</option><option>6 guests</option><option>8 guests</option><option>10+ guests</option></select>
+        </div>
+        <div class="field"><label for="fPack">Package</label>
+          <select id="fPack" name="package"><option>Main Floor</option><option>High Roller Deck</option><option>The Vault Lounge</option><option>Full Buyout</option></select>
+        </div>
+      </div>
+      <div class="field"><label for="fEvent">Event <em>(optional)</em></label>
+        <select id="fEvent" name="event"><option>Neon Horizon — 18 Dec</option><option>Bass District — 09 Jan</option><option>Casino Royale — 30 Jan</option><option>The Gilded Masquerade — 13 Feb</option><option>Just a regular night</option></select>
+      </div>
+      <div class="field"><label for="fMsg">Anything we should know? <em>(optional)</em></label><textarea id="fMsg" name="message" rows="3" placeholder="Birthdays, song requests, surprises..."></textarea></div>
+      <button type="submit" class="btn btn-block">Request Booking</button>
+      <p class="form-ok" id="formOk" role="status">&#10003; Request received — we'll confirm your table within 24 hours.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#161006"/><path d="M14 40 L24 40 L28 24 L34 48 L38 32 L42 40 L50 40" stroke="#e8b64c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PULSE</span></a>
+      <p>Goa's DJ and entertainment crew — casino nights, club takeovers, festivals and private parties.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.8c0-.9.6-1.3 1.4-1.3H15z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.5 9.8v4.4L14.5 12z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="blog.html">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Book</h4>
+      <a href="booking.html">Book a table</a><a href="events.html">All events</a><a href="about.html">Our crew</a><a href="blog.html">Journal</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:hello@pulsegoa.in">hello@pulsegoa.in</a>
+      <a href="tel:+919000000000">+91 90000 00000</a>
+      <span class="muted">Goa, India</span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> PULSE. All rights reserved.</p>
+    <p class="muted">Crafted for the night.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
