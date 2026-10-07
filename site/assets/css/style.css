@@ -806,3 +806,9 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .hcount em{font-style:normal;margin:0 8px;opacity:.5}
 .hslide .hero-inner{padding-bottom:215px}
 @media(max-width:900px){.hcount{display:none}.hero-slider .hdots{bottom:126px}}
+
+/* ============ V6 — equal top/bottom hero gaps ============ */
+/* Balance the centering on the flex container (not the inner), so the
+   content sits exactly midway between the fixed nav and the hero foot. */
+.hslide{padding:74px 0 104px}
+.hslide .hero-inner{padding-top:0;padding-bottom:0}
