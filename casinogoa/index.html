@@ -34,6 +34,8 @@
 </script>
 </head>
 <body>
+<div class="notice" id="notice" role="note"><p><strong>&#9888; CAUTIONARY NOTICE:</strong> We do not operate Online Gaming Platforms.</p><button id="noticeClose" aria-label="Dismiss notice">&times;</button></div>
+
 
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-eq"><span></span><span></span><span></span><span></span><span></span></div>
@@ -42,18 +44,18 @@
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="logo" aria-label="Casino Pride Goa home">
-      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7dd8a"/><stop offset="1" stop-color="#e8b64c"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#161006"/><path d="M32 10C26 22 16 30 16 38c0 6 4 10 9 10 2 0 4-1 5-2v6h4v-6c1 1 3 2 5 2 5 0 9-4 9-10 0-8-10-16-16-28z" stroke="url(#lg)" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>
-      <span>CASINO PRIDE</span>
-    </a>
+    <a href="index.html" class="logo" aria-label="Casino Pride Goa home"><img class="logo-img" src="assets/images/logo.png" alt="Casino Pride — Best Casino in Goa"></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="casino.html">Casino</a>
+      <a href="packages.html">Packages</a>
       <a href="events.html">Events</a>
-      <a href="blog.html">Guides</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a href="booking.html" class="btn btn-sm">Book Your Evening</a>
+      <a href="tel:+919158885000" class="btn btn-sm btn-call">Call +919158885000</a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -72,7 +74,7 @@
         <h1 class="hero-title"><span>The Best Casino</span><span class="grad">in Goa</span></h1>
         <p class="hero-sub">Casino Pride sails the Mandovi River — 20+ games, 200+ gaming seats and live entertainment aboard Goa's iconic offshore casino cruise.</p>
         <div class="hero-actions">
-          <a href="booking.html" class="btn">Book Your Evening</a>
+          <a href="packages.html" class="btn">Book Your Evening</a>
           <a href="events.html" class="btn btn-ghost">What's On</a>
         </div>
       </div>
@@ -98,7 +100,7 @@
         <p class="hero-title"><span>The Elite</span><span class="grad">Deck</span></p>
         <p class="hero-sub">Private lounges, dedicated hosts and high-limit tables — the most exclusive way to play in Goa.</p>
         <div class="hero-actions">
-          <a href="booking.html" class="btn">Reserve VIP</a>
+          <a href="packages.html" class="btn">Reserve VIP</a>
           <a href="about.html" class="btn btn-ghost">Our Story</a>
         </div>
       </div>
@@ -142,7 +144,7 @@
         <p>Poker, mini flush and casino war for every bankroll.</p>
         <span class="text-link">Explore &rarr;</span>
       </a>
-      <a href="booking.html" class="tile rv" style="--d:.16s">
+      <a href="packages.html" class="tile rv" style="--d:.16s">
         <span class="tile-suit">&#9830;</span>
         <h3>VVIP Tables</h3>
         <p>Exclusive high-limit tables and premium gaming, open 24x7.</p>
@@ -182,7 +184,7 @@
             <li><strong>All decks</strong><span>Cruise</span></li>
             <li><strong>Included</strong><span>With entry</span></li>
           </ul>
-          <a href="booking.html" class="text-link">Reserve your seat &rarr;</a>
+          <a href="packages.html" class="text-link">Reserve your seat &rarr;</a>
         </div>
       </article>
       <article class="event-card rv" style="--d:.12s">
@@ -198,7 +200,7 @@
             <li><strong>31 Dec</strong><span>Annual gala</span></li>
             <li><strong>All decks</strong><span>Cruise</span></li>
           </ul>
-          <a href="booking.html" class="text-link">Reserve your seat &rarr;</a>
+          <a href="packages.html" class="text-link">Reserve your seat &rarr;</a>
         </div>
       </article>
     </div>
@@ -252,21 +254,21 @@
         <span class="offer-tag">Groups</span>
         <h3>Group Bookings</h3>
         <p>Coming with your gaming buddies? Groups unlock special benefits aboard the Pride.</p>
-        <a href="booking.html" class="btn btn-sm">Book a group</a>
+        <a href="packages.html" class="btn btn-sm">Book a group</a>
         <p class="offer-terms">Advance booking recommended. 21+ only.</p>
       </article>
       <article class="offer-card featured rv" style="--d:.1s">
         <span class="offer-tag">Members</span>
         <h3>Pride Club</h3>
         <p>Members hear first about new evenings, events and exclusive privileges on board.</p>
-        <a href="booking.html" class="btn btn-sm">Join the club</a>
+        <a href="packages.html" class="btn btn-sm">Join the club</a>
         <p class="offer-terms">Ask our team when you board. 21+ only.</p>
       </article>
       <article class="offer-card rv" style="--d:.2s">
         <span class="offer-tag">Online</span>
         <h3>Book Packages Online</h3>
         <p>Reserve your entry package online — from ₹2,500 with dining, drinks and play coupons included.</p>
-        <a href="booking.html" class="btn btn-sm">Book online</a>
+        <a href="packages.html" class="btn btn-sm">Book online</a>
         <p class="offer-terms">Packages updated monthly. T&amp;C apply. 21+ only.</p>
       </article>
     </div>
@@ -290,7 +292,7 @@
           <li>Weather deck access</li>
           <li>Food buffet</li>
         </ul>
-        <a href="booking.html" class="btn btn-ghost">Choose Ideal</a>
+        <a href="packages.html" class="btn btn-ghost">Choose Ideal</a>
       </article>
       <article class="pack featured rv" style="--d:.08s">
         <span class="pack-tag">Most booked</span>
@@ -303,7 +305,7 @@
           <li>Weather deck access</li>
           <li>Food buffet</li>
         </ul>
-        <a href="booking.html" class="btn">Choose Super</a>
+        <a href="packages.html" class="btn">Choose Super</a>
       </article>
       <article class="pack rv" style="--d:.16s">
         <h3>CP Super Luxury</h3>
@@ -315,7 +317,7 @@
           <li>Exotic dishes</li>
           <li>Weather deck access</li>
         </ul>
-        <a href="booking.html" class="btn btn-ghost">Choose Luxury</a>
+        <a href="packages.html" class="btn btn-ghost">Choose Luxury</a>
       </article>
       <article class="pack rv" style="--d:.24s">
         <h3>CP Supreme</h3>
@@ -327,7 +329,7 @@
           <li>Front-row seating + &agrave; la carte</li>
           <li>Weather deck access</li>
         </ul>
-        <a href="booking.html" class="btn btn-ghost">Choose Supreme</a>
+        <a href="packages.html" class="btn btn-ghost">Choose Supreme</a>
       </article>
     </div>
     <p class="pack-note rv">January 2026 packages &mdash; updated monthly. T&amp;C apply. Play coupons (OTPC) for 21+ only.</p>
@@ -377,7 +379,7 @@
         <li>Poker, roulette, baccarat, dragon tiger &amp; 20+ games</li>
         <li>Multi-cuisine buffet, live chaat counter &amp; live shows</li>
       </ul>
-      <a href="booking.html" class="btn rv" style="--d:.3s">Plan your visit</a>
+      <a href="packages.html" class="btn rv" style="--d:.3s">Plan your visit</a>
     </div>
   </div>
 </section>
@@ -442,7 +444,7 @@
       <div><span>Boarding</span><strong>9:00 PM</strong></div>
       <div><span>Packages</span><strong>&#8377;2,500 &ndash; &#8377;5,500</strong></div>
       <div><span>Venue</span><strong>Casino Pride Cruise, Panjim</strong></div>
-      <a href="booking.html" class="btn">Reserve Gala Seats</a>
+      <a href="packages.html" class="btn">Reserve Gala Seats</a>
     </div>
   </div>
 </section>
@@ -585,7 +587,7 @@
     <h2 class="rv">The best casino in Goa</h2>
     <p class="rv">Searching for the <strong>best casino in Goa</strong>? Casino Pride floats above the competition — literally. As one of the <strong>biggest offshore casinos in Goa</strong>, our luxury cruise on the <strong>Mandovi River</strong> packs 20+ games — poker, roulette, baccarat, dragon tiger, andar bahar and more — across 200+ gaming seats, 3 floors of gaming, dining and live entertainment into one unforgettable experience.</p>
     <p class="rv">From <strong>live music and weekend party nights</strong> to New Year galas and celebrity performances, there's always a reason to board — and with the casino open 24x7, the night is yours to shape. First-timer? Our dealers will teach you every game at the table.</p>
-    <p class="rv"><strong>Casino Pride entry packages</strong> start from ₹2,500 and include boarding at Captain of Ports Jetty, Panjim, a food buffet, drinks and play coupons. <a href="booking.html">Reserve your evening</a> or explore <a href="events.html">what's on board</a> this month.</p>
+    <p class="rv"><strong>Casino Pride entry packages</strong> start from ₹2,500 and include boarding at Captain of Ports Jetty, Panjim, a food buffet, drinks and play coupons. <a href="packages.html">Reserve your evening</a> or explore <a href="events.html">what's on board</a> this month.</p>
   </div>
 </section>
 
@@ -594,7 +596,7 @@
   <div class="container rv">
     <h2>The river is <span class="grad">calling.</span></h2>
     <p>Gala season fills fast — reserve your evening before the decks do.</p>
-    <a href="booking.html" class="btn">Book Your Evening</a>
+    <a href="packages.html" class="btn">Book Your Evening</a>
   </div>
 </section>
 
@@ -603,7 +605,7 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#161006"/><path d="M32 10C26 22 16 30 16 38c0 6 4 10 9 10 2 0 4-1 5-2v6h4v-6c1 1 3 2 5 2 5 0 9-4 9-10 0-8-10-16-16-28z" stroke="#e8b64c" stroke-width="4" fill="none" stroke-linejoin="round"/></svg><span>CASINO PRIDE</span></a>
+      <a href="index.html" class="logo" aria-label="Casino Pride Goa home"><img class="logo-img" src="assets/images/logo.png" alt="Casino Pride — Best Casino in Goa"></a>
       <p>Casino Pride Goa — the best casino in Goa. Offshore casino cruise on the Mandovi River: poker, roulette, baccarat, VIP gaming and live entertainment.</p>
       <div class="socials">
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
@@ -614,11 +616,11 @@
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="blog.html">Guides</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="casino.html">Casino</a><a href="events.html">Events</a>
     </div>
     <div class="footer-col">
       <h4>Book</h4>
-      <a href="booking.html">Book your evening</a><a href="events.html">All events</a><a href="about.html">About us</a><a href="blog.html">Player guides</a>
+      <a href="packages.html">Packages</a><a href="events.html">All events</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
@@ -628,7 +630,10 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; <span id="year">2026</span> Casino Pride Goa. All rights reserved. <span class="muted">21+ only. Play responsibly.</span></p>
+    <div class="fb-left">
+      <p>&copy; <span id="year">2026</span> Casino Pride Goa. All rights reserved. <span class="muted">21+ only. Play responsibly.</span></p>
+      <p class="credit">Developed by <a href="https://www.sanctify.in" title="Best Digital Marketing Agency in Goa" target="_blank" rel="noopener">Sanctify</a><a href="https://www.google.com/search?sca_esv=57d7a4427c50a999&amp;rlz=1C1YTUH_enIN1032IN1033&amp;sxsrf=APpeQntKVfJ8lTdtMQIa7sDz8A2FJz5BXQ:1791405016221&amp;kgmid=/g/1hc7h4hhv&amp;q=Sanctify+%E2%80%94+Digital+Marketing+Agency+Goa&amp;shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpic&amp;shndl=30&amp;source=sh/x/loc/uni/m1/1&amp;kgs=7fb7ef7833f5d604&amp;utm_source=dlvs1,epsd1,esd2e,ltae,rimspwouoe,sdpic,sh/x/loc/uni/m1/1" title="Top Rated Digital Marketing Agency in Goa" target="_blank" rel="noopener"><sup>Goa</sup></a></p>
+    </div>
     <p class="muted">Sail. Play. Celebrate.</p>
   </div>
 </footer>
