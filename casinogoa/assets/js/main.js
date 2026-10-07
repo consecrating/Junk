@@ -158,30 +158,32 @@
   /* ---------- booking form ---------- */
   var form = document.getElementById('bookForm');
   if (form) {
-    var okMsg = document.getElementById('formOk');
+    var okMsg = document.getElementById('bookOk');
     // sensible minimum: today
-    var dateInput = document.getElementById('fDate');
-    dateInput.min = new Date().toISOString().split('T')[0];
+    var dateInput = document.getElementById('bkDate');
+    if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var valid = true;
       form.querySelectorAll('[required]').forEach(function (input) {
-        var field = input.closest('.field');
         var bad = !input.value.trim() ||
-          (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value));
-        field.classList.toggle('error', bad);
+          (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) ||
+          (input.type === 'tel' && input.value.replace(/\D/g, '').length < 7);
+        input.classList.toggle('input-error', bad);
         if (bad) valid = false;
       });
       if (!valid) return;
-      okMsg.classList.add('show');
-      okMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (okMsg) {
+        okMsg.classList.add('show');
+        okMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
       form.querySelectorAll('input, textarea').forEach(function (i) { i.value = ''; });
-      setTimeout(function () { okMsg.classList.remove('show'); }, 8000);
+      setTimeout(function () { if (okMsg) okMsg.classList.remove('show'); }, 8000);
     });
     form.querySelectorAll('[required]').forEach(function (input) {
       input.addEventListener('input', function () {
-        input.closest('.field').classList.remove('error');
+        input.classList.remove('input-error');
       });
     });
   }
@@ -349,6 +351,25 @@
     window.addEventListener('resize', onScroll);
     render();
   })();
+
+  /* ---------- booking: package card select ---------- */
+  var packs = document.querySelectorAll('.bpack');
+  var packSel = document.getElementById('bkPack');
+  function selectPack(val) {
+    packs.forEach(function (c) {
+      var on = c.getAttribute('data-pack') === val;
+      c.classList.toggle('selected', on);
+      c.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    if (packSel) packSel.value = val;
+  }
+  packs.forEach(function (c) {
+    c.addEventListener('click', function () { selectPack(c.getAttribute('data-pack')); });
+    c.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectPack(c.getAttribute('data-pack')); }
+    });
+  });
+  if (packSel) packSel.addEventListener('change', function () { selectPack(packSel.value); });
 
   /* ---------- respect reduced motion for video ---------- */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
