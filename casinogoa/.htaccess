@@ -1,0 +1,13 @@
+# Casino Pride Goa — clean URLs (no .html in the address bar)
+RewriteEngine On
+
+# 301 redirect any .html URL to its clean version
+RewriteCond %{THE_REQUEST} \.html[\s?/] [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Internally serve clean URLs from the .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+DirectoryIndex index.html

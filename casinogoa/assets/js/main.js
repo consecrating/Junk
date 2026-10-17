@@ -36,13 +36,14 @@
     });
   });
 
-  /* ---------- nav active link ---------- */
+  /* ---------- nav active link (clean URLs) ---------- */
   (function () {
-    var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    if (page === '') page = 'index.html';
+    var segs = window.location.pathname.split('/').filter(Boolean);
+    var page = (segs.pop() || 'index').toLowerCase();
     document.querySelectorAll('.nav-links a').forEach(function (a) {
-      var href = (a.getAttribute('href') || '').toLowerCase().split('/').pop();
-      if (href === page || (page.indexOf('post-') === 0 && href === 'blog.html')) {
+      var href = (a.getAttribute('href') || '').toLowerCase().replace(/^(\.\.\/)+/, '').replace(/\.html$/, '');
+      if (href === '' || href === './' || href === '/') href = 'index';
+      if (href === page || (page.indexOf('post-') === 0 && href === 'blog')) {
         a.classList.add('active');
       }
     });
