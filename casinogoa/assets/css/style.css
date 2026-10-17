@@ -1099,3 +1099,10 @@ body.notice-off{--notice-h:0px}
 .cta-premium p{color:var(--muted);font-size:1.1rem;margin:0 0 36px}
 .cta-premium .btn{font-size:1rem;padding:18px 46px}
 @media(prefers-reduced-motion:reduce){.cta-bg img{animation:none}}
+
+/* ============ In-post lead CTA ============ */
+.post-cta{margin:44px 0;padding:clamp(28px,4vw,44px);border:1px solid rgba(232,182,76,.4);border-radius:20px;background:linear-gradient(150deg,rgba(232,182,76,.1),rgba(232,182,76,.02));text-align:center;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.post-cta-eyebrow{color:var(--gold2);font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin:0 0 12px}
+.post-cta h3{font-size:1.5rem;margin:0 0 10px;color:#fff}
+.post-cta p{color:var(--muted);margin:0 0 22px}
+.post-cta-btns{display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap}
