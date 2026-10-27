@@ -14,6 +14,7 @@ RewriteRule ^posts/post-9(\.html)?$ /blog/first-time-casino-pride-games-guide [R
 RewriteRule ^posts/post-10(\.html)?$ /blog/casino-pride-packages-compared [R=301,L]
 RewriteRule ^posts/post-11(\.html)?$ /blog/casino-pride-birthday-group-nights [R=301,L]
 # Safety net: any other /posts/<x> -> /blog/<x>, and bare /posts -> /blog
+RewriteCond %{THE_REQUEST} /posts/ [NC]
 RewriteRule ^posts/([^/]+)(\.html)?$ /blog/$1 [R=301,L]
 RewriteRule ^posts/?$ /blog [R=301,L]
 
@@ -22,7 +23,7 @@ RewriteCond %{THE_REQUEST} \.html[\s?/] [NC]
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
 # ---------- Serve /blog/<slug> from the posts/ folder (files stay in posts/) ----------
-RewriteRule ^blog/([^/]+)$ posts/$1.html [L]
+RewriteRule ^blog/([^/]+)$ posts/$1.html [END]
 
 # ---------- Serve clean URLs from the .html files ----------
 RewriteCond %{REQUEST_FILENAME} !-d
