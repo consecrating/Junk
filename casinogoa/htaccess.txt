@@ -1,0 +1,68 @@
+# Casino Pride Goa — clean URLs, SEO slugs & hardening
+RewriteEngine On
+
+# ---------- 301: old numbered post slugs -> new /blog/<keyword-slug> ----------
+RewriteRule ^posts/post-1(\.html)?$ /blog/casino-pride-entry-fee-packages-2026 [R=301,L]
+RewriteRule ^posts/post-2(\.html)?$ /blog/how-to-book-casino-pride-goa [R=301,L]
+RewriteRule ^posts/post-3(\.html)?$ /blog/casino-pride-vs-other-goa-casinos [R=301,L]
+RewriteRule ^posts/post-4(\.html)?$ /blog/evening-on-casino-pride-hour-by-hour [R=301,L]
+RewriteRule ^posts/post-5(\.html)?$ /blog/is-casino-pride-worth-it [R=301,L]
+RewriteRule ^posts/post-6(\.html)?$ /blog/casino-pride-age-limit-dress-code-id-rules [R=301,L]
+RewriteRule ^posts/post-7(\.html)?$ /blog/how-to-reach-casino-pride-jetty-boarding [R=301,L]
+RewriteRule ^posts/post-8(\.html)?$ /blog/casino-pride-new-year-eve-gala [R=301,L]
+RewriteRule ^posts/post-9(\.html)?$ /blog/first-time-casino-pride-games-guide [R=301,L]
+RewriteRule ^posts/post-10(\.html)?$ /blog/casino-pride-packages-compared [R=301,L]
+RewriteRule ^posts/post-11(\.html)?$ /blog/casino-pride-birthday-group-nights [R=301,L]
+# Safety net: any other /posts/<x> -> /blog/<x>, and bare /posts -> /blog
+RewriteRule ^posts/([^/]+)(\.html)?$ /blog/$1 [R=301,L]
+RewriteRule ^posts/?$ /blog [R=301,L]
+
+# ---------- 301: any .html URL -> its clean version ----------
+RewriteCond %{THE_REQUEST} \.html[\s?/] [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# ---------- Serve /blog/<slug> from the posts/ folder (files stay in posts/) ----------
+RewriteRule ^blog/([^/]+)$ posts/$1.html [L]
+
+# ---------- Serve clean URLs from the .html files ----------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+DirectoryIndex index.html
+
+# ================= HARDENING =================
+# No directory listings
+Options -Indexes
+
+# Block access to sensitive files & version-control dirs
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.ht">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "\.(env|bak|old|sql|log|swp|dist|ini)$">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "(^\.|/\.git|/\.svn)">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_URI} ^/(?:\.git|\.svn|\.env) [NC,OR]
+  RewriteCond %{REQUEST_URI} (wp-config|phpmyadmin|xmlrpc\.php) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# Block known exploit scanners (never block curl/wget — used for legit checks)
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|nmap|masscan|ZmEu|wpscan|joomscan|arachni|havij|netsparker|acunetix|DirBuster|morfeus|fux|libwww-perl) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# Security headers (applied only if mod_headers is available)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

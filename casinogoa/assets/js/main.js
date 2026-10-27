@@ -36,14 +36,15 @@
     });
   });
 
-  /* ---------- nav active link (clean URLs) ---------- */
+  /* ---------- nav active link (clean URLs, /blog/<slug> posts) ---------- */
   (function () {
-    var segs = window.location.pathname.split('/').filter(Boolean);
-    var page = (segs.pop() || 'index').toLowerCase();
+    var path = window.location.pathname.toLowerCase();
+    var segs = path.split('/').filter(Boolean);
+    var page = (segs.pop() || 'index');
     document.querySelectorAll('.nav-links a').forEach(function (a) {
       var href = (a.getAttribute('href') || '').toLowerCase().replace(/^(\.\.\/)+/, '').replace(/\.html$/, '');
       if (href === '' || href === './' || href === '/') href = 'index';
-      if (href === page || (page.indexOf('post-') === 0 && href === 'blog')) {
+      if (href === page || (href === 'blog' && (page === 'blog' || path.indexOf('/blog/') === 0))) {
         a.classList.add('active');
       }
     });
@@ -175,7 +176,22 @@
         if (bad) valid = false;
       });
       if (!valid) return;
+      // Real delivery: open WhatsApp with the enquiry pre-filled to the business number.
+      var packSel = document.getElementById('bkPack');
+      var packTxt = packSel && packSel.options[packSel.selectedIndex]
+        ? packSel.options[packSel.selectedIndex].text : '';
+      var msg =
+        '*New Reservation Request — Casino Pride Goa*\n' +
+        'Name: ' + document.getElementById('bkName').value.trim() + '\n' +
+        'Phone: ' + document.getElementById('bkPhone').value.trim() + '\n' +
+        'Email: ' + document.getElementById('bkEmail').value.trim() + '\n' +
+        'Date: ' + document.getElementById('bkDate').value + '\n' +
+        'Guests: ' + document.getElementById('bkGuests').value + '\n' +
+        'Package: ' + packTxt + '\n' +
+        'Notes: ' + (document.getElementById('bkNotes').value.trim() || '—');
+      window.open('https://wa.me/919158885000?text=' + encodeURIComponent(msg), '_blank', 'noopener');
       if (okMsg) {
+        okMsg.textContent = '✓ Opening WhatsApp with your request pre-filled — tap send and our team will confirm shortly.';
         okMsg.classList.add('show');
         okMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
@@ -202,8 +218,18 @@
         if (bad) valid = false;
       });
       if (!valid) return;
+      // Real delivery: open WhatsApp with the message pre-filled to the business number.
+      var cMsg =
+        '*Website Enquiry — Casino Pride Goa*\n' +
+        'Name: ' + document.getElementById('cName').value.trim() + '\n' +
+        'Email: ' + document.getElementById('cEmail').value.trim() + '\n' +
+        'Message: ' + document.getElementById('cMsg').value.trim();
+      window.open('https://wa.me/919158885000?text=' + encodeURIComponent(cMsg), '_blank', 'noopener');
       var ok = document.getElementById('contactOk');
-      if (ok) { ok.classList.add('show'); ok.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+      if (ok) {
+        ok.textContent = '✓ Opening WhatsApp with your message pre-filled — tap send and a real human will reply.';
+        ok.classList.add('show'); ok.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
       cForm.querySelectorAll('input, textarea').forEach(function (i) { i.value = ''; });
       setTimeout(function () { if (ok) ok.classList.remove('show'); }, 8000);
     });
